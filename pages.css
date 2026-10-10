@@ -185,3 +185,10 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .service-detail .text-link{margin-top:var(--space-5)}
 @media(max-width:900px){.sf-ai-band .wrap{grid-template-columns:1fr;gap:var(--space-8)}}
 @media(max-width:520px){.sf-ai-list li{grid-template-columns:1fr;gap:var(--space-1)}}
+
+/* Hero photo and audience links (October 10, 2026) */
+.hero-visual>img.hero-photo{object-position:50% 18%}
+.audience-inner a{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:5px}
+.audience-inner a:hover{color:var(--teal)}
+.service .text-link{margin-top:var(--space-4)}
+@media(max-width:650px){.hero-visual figcaption{font-size:1.05rem}}
