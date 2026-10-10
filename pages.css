@@ -185,3 +185,13 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .service-detail .text-link{margin-top:var(--space-5)}
 @media(max-width:900px){.sf-ai-band .wrap{grid-template-columns:1fr;gap:var(--space-8)}}
 @media(max-width:520px){.sf-ai-list li{grid-template-columns:1fr;gap:var(--space-1)}}
+
+/* Hero photo and audience links (October 10, 2026) */
+.hero-panel{background:var(--deep);color:var(--cream);padding:var(--space-8) var(--space-8) var(--space-6);border-bottom:1px solid rgba(245,240,232,.18)}.hero-panel-eyebrow{font:600 .6875rem/1.4 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#CFE3E3}.hero-panel-title{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,2.3vw,1.875rem);line-height:1.15;margin:var(--space-3) 0 var(--space-5);color:var(--cream)}.hero-panel-title em{font-style:italic}.hero-services{list-style:none;margin:0;padding:0;border-top:1px solid rgba(245,240,232,.25)}.hero-services li{border-bottom:1px solid rgba(245,240,232,.25)}.hero-services a{display:grid;grid-template-columns:78px 1fr;gap:var(--space-3);align-items:baseline;padding:10px 0;color:var(--cream);text-decoration:none;font-size:.9375rem;line-height:1.35}.hero-services a:hover{color:var(--cream);text-decoration:none}.hero-services .verb{font:600 .625rem/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#CFE3E3}.hero-services a:hover .name{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}.hero-services a:focus-visible{outline:2px solid var(--cream);outline-offset:2px}.hero-step{display:block;width:54px;height:40px;margin:var(--space-5) 0 0 auto}@media(min-width:651px) and (max-width:1050px){.hero-panel{padding:var(--space-6)}.hero-services a{grid-template-columns:1fr;gap:4px}}@media(max-width:650px){.hero-panel{padding:var(--space-6) var(--space-5) var(--space-5)}.hero-services a{grid-template-columns:72px 1fr}.hero-step{width:44px;height:33px;margin-top:var(--space-4)}}
+.audience-inner a{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:5px}
+.audience-inner a:hover{color:var(--teal)}
+.service .text-link{margin-top:var(--space-4)}
+@media(max-width:650px){.hero-visual figcaption{font-size:1.05rem}}
+
+/* Ideas page: show the full text card images (900 x 473) without cropping */
+.editorial-card img{aspect-ratio:900/473;max-height:none}
