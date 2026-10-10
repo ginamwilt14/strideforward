@@ -16,7 +16,7 @@
 <script defer="" src="/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "StrideForward", "url": "https://www.strideforward.world", "logo": "https://www.strideforward.world/assets/brand/logo-horizontal.svg", "parentOrganization": {"@type": "Organization", "name": "GMW Group LLC"}, "founder": {"@type": "Person", "name": "Gina Wilt", "honorificSuffix": "EdD, MBA"}, "email": "hello@strideforward.world"}</script>
 </head><body><a class="skip" href="#main">Skip to content</a>
-<header class="header"><div class="wrap header-inner"><a aria-label="StrideForward home" class="brand" href="/index.html"><img alt="StrideForward" class="logo-light" height="156" src="/assets/brand/logo-horizontal.svg" width="945"/><img alt="StrideForward" class="logo-dark" height="156" src="/assets/brand/logo-horizontal-reversed.svg" width="945"/></a><button aria-controls="navigation" aria-expanded="false" class="menu-button">Menu</button><nav aria-label="Main navigation" id="navigation"><a class="" href="/services.html">What we do</a><a class="" href="/about.html">About</a><a class="" href="/blog/index.html">Ideas</a><a class="" href="/professional-learning.html">Professional Learning</a><a aria-current="page" class="nav-cta" href="/contact.html#book">Book a discovery call</a></nav><button aria-label="Switch to dark mode" class="theme-button" title="Change color theme"><span aria-hidden="true">◐</span></button></div></header>
+<header class="header"><div class="wrap header-inner"><a aria-label="StrideForward home" class="brand" href="/index.html"><img alt="StrideForward" class="logo-light" height="156" src="/assets/brand/logo-horizontal.svg" width="945"/><img alt="StrideForward" class="logo-dark" height="156" src="/assets/brand/logo-horizontal-reversed.svg" width="945"/></a><button aria-controls="navigation" aria-expanded="false" class="menu-button">Menu</button><nav aria-label="Main navigation" id="navigation"><a class="" href="/services.html">What we do</a><a class="" href="/about.html">About</a><a class="" href="/blog/index.html">Ideas</a><a aria-current="page" class="nav-cta" href="/contact.html#book">Book a discovery call</a></nav><button aria-label="Switch to dark mode" class="theme-button" title="Change color theme"><span aria-hidden="true">◐</span></button></div></header>
 <main id="main">
 <section class="page-hero wrap">
 <p class="eyebrow">Book a discovery call</p>
@@ -85,6 +85,7 @@
 </textarea>
 </div>
 <input id="interest" name="interest" type="hidden" value=""/>
+<input id="source" name="source" type="hidden" value=""/>
 <p class="small-note">Your information is used to respond to your inquiry. Please don’t include sensitive personal information. <a href="/privacy.html">Privacy details</a>.</p>
 <button class="button" type="submit">Send your note <span aria-hidden="true">↗</span>
 </button>
@@ -100,7 +101,9 @@
   var paths={consulting:"Consulting and strategy",program:"Program design and development",learning:"Professional learning for a team"};
   var q=new URLSearchParams(location.search);var path=paths[q.get("path")]||"";
   var el=document.getElementById("calendly");if(!el)return;
-  var url=el.getAttribute("data-url");if(path){url+="&a2="+encodeURIComponent(path);}
+  var src=(q.get("src")||"").toLowerCase();if(!/^[a-z0-9-]{1,40}$/.test(src))src="";
+  var url=el.getAttribute("data-url");if(path){url+="&a2="+encodeURIComponent(path);}if(src){url+="&utm_source="+src;}
+  var source=document.getElementById("source");if(source&&src)source.value=src;
   el.setAttribute("data-url",url);
   var interest=document.getElementById("interest");if(interest&&path)interest.value=path;
   var s=document.createElement("script");s.src="https://assets.calendly.com/assets/external/widget.js";s.async=true;

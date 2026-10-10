@@ -140,3 +140,8 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 @media(max-width:900px){.sf-pathhead,.sf-pl,.sf-deck,.sf-story,.sf-steps{grid-template-columns:1fr}.sf-deck{padding:var(--space-6)}}
 
 .sf-path-note a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+
+/* EdTech Week campaign (October 2026): event band, two-card grids */
+.review-note{max-width:none}
+.review-note a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+@media(min-width:901px){.sf-paths-2,.sf-proof-2{grid-template-columns:repeat(2,1fr)}}
