@@ -1,0 +1,25 @@
+# LAUNCH: upload only after StrideForward DNS and HTTPS are verified.
+https://www.gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
+https://gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
+http://www.gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
+http://gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
+
+# Path compatibility only. Domain migration is deliberately separate.
+/services /services.html 200
+/about /about.html 200
+/professional-learning /professional-learning.html 200
+/contact /contact.html 200
+/blog/experience-with-too-much-friction /blog/experience-with-too-much-friction.html 200
+/blog/k12/coaching-conversation-starts-before /blog/k12/coaching-conversation-starts-before.html 200
+/blog/k12/coaching-culture-not-more-coaches /blog/k12/coaching-culture-not-more-coaches.html 200
+/blog/k12/teacher-input-is-not-teacher-voice /blog/k12/teacher-input-is-not-teacher-voice.html 200
+/blog/k12/whose-learning-just-started /blog/k12/whose-learning-just-started.html 200
+/blog/model-outgrown-revenue /blog/model-outgrown-revenue.html 200
+/blog/strategy-no-longer-fits /blog/strategy-no-longer-fits.html 200
+/resources/customer-experience-blueprint /resources/customer-experience-blueprint.html 200
+/resources/pl-session-planner /resources/pl-session-planner.html 200
+/privacy /privacy.html 200
+/thanks/booked /thanks/booked.html 200
+/book /contact.html#book 302
+/resources/problem-clarity-worksheet /resources/problem-clarity-worksheet.html 200
+/deck /services.html#deck 302

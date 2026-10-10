@@ -1,0 +1,16 @@
+{
+  "name": "StrideForward",
+  "short_name": "StrideForward",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#1D6A72",
+  "background_color": "#F5F0E8",
+  "icons": [
+    {
+      "src": "/assets/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

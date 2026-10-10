@@ -1,0 +1,4 @@
+[build]
+  publish = "."
+
+# No build command: upload this folder as a complete static site.
