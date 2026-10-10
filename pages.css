@@ -192,3 +192,6 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .audience-inner a:hover{color:var(--teal)}
 .service .text-link{margin-top:var(--space-4)}
 @media(max-width:650px){.hero-visual figcaption{font-size:1.05rem}}
+
+/* Ideas page: show the full text card images (900 x 473) without cropping */
+.editorial-card img{aspect-ratio:900/473;max-height:none}
