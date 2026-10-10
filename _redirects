@@ -26,3 +26,5 @@ http://gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
 /edtechweek /edtechweek.html 200
 /scope-note-example /scope-note-example.html 200
 /resources/pilot-plan /resources/pilot-plan.html 200
+/ai-workflows /ai-workflows.html 200
+/ai /ai-workflows 301
