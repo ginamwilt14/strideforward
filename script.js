@@ -59,3 +59,22 @@ if (document.querySelector('.ml-embedded')) {
   })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
   window.ml('account','2622985');
 }
+// Google Analytics lead events (sf_ prefix). sfga does nothing when the Google tag is not loaded (previews, local copies).
+function sfga(name, params) { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); }
+function sfSection(el) { const s = el.closest('section[id], section[aria-labelledby], header, footer'); return s ? (s.id || s.getAttribute('aria-labelledby') || s.tagName.toLowerCase()) : ''; }
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+  const href = link.getAttribute('href');
+  const text = link.textContent.replace(/\s+/g, ' ').replace(/[↗↓]/g, '').trim().slice(0, 80);
+  if (/#book$|^\/book$|calendly\.com/.test(href)) sfga('sf_book_click', {cta_text: text, cta_section: sfSection(link)});
+  else if (/#deck$|^\/deck$/.test(href)) sfga('sf_deck_click', {cta_text: text, cta_section: sfSection(link)});
+  else if (/^mailto:/.test(href)) sfga('sf_email_click', {cta_section: sfSection(link)});
+});
+document.querySelectorAll('form[data-netlify]').forEach(form => {
+  form.addEventListener('submit', () => sfga('sf_form_submit', {form_name: form.getAttribute('name')}));
+});
+// Calendly's inline widget posts a message to this page when a call is booked.
+window.addEventListener('message', event => {
+  if (event.origin === 'https://calendly.com' && event.data && event.data.event === 'calendly.event_scheduled') sfga('sf_call_booked', {page: location.pathname});
+});
