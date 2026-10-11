@@ -30,24 +30,58 @@ updateThemeLabel();
 const interest = document.querySelector('#interest');
 const selectedInterest = new URLSearchParams(location.search).get('interest') || (location.hash === '#professional-learning' ? 'Professional Learning' : '');
 if (interest && selectedInterest) interest.value = selectedInterest;
-// Native POSTs are processed by Netlify, not by the static review environment.
+// Form submissions go to two places: Netlify (keeps the record, notifies Gina) and MailerLite (sends the email).
+// Both requests finish before the visitor moves to the thank-you page. A request started during a page change
+// is often dropped, which is why earlier submissions reached Netlify but never MailerLite.
 const productionHost = /(^|\.)strideforward\.world$|(^|\.)gmwgroupllc\.com$|\.netlify\.app$/.test(location.hostname);
-const ML_FORMS = {'problem-clarity-download': '199603719231243992', 'deck-request': '199603862488745364'};
+// Netlify form name -> MailerLite form (GMW Group LLC account). Each MailerLite form adds the person to a group,
+// and an automation on that group sends the email right away.
+const ML_ACCOUNT = '2622985';
+const ML_FORMS = {
+  'deck-request': '199603862488745364',             // Capabilities overview: 3 emails
+  'problem-clarity-download': '199603719231243992', // Problem Clarity Worksheet: 3 emails
+  'cx-blueprint-download': '201049592917133168',    // CX Blueprint kit: 3 emails
+  'pl-planner-download': '201049757183903301',      // PL Session Planner: 1 email
+  'contact': '201049857072301553'                   // Write first: receipt email
+};
+function sfTimeout(promise, ms) {
+  return Promise.race([promise, new Promise((resolve, reject) => setTimeout(() => reject(new Error('timeout')), ms))]);
+}
+function sfMailerLite(form) {
+  const id = ML_FORMS[form.getAttribute('name')];
+  const email = form.querySelector('input[type=email]');
+  const trap = form.querySelector('[name="bot-field"]');
+  if (!id || !email || !email.value || (trap && trap.value)) return Promise.resolve();
+  const body = new URLSearchParams({'fields[email]': email.value.trim(), 'ml-submit': '1', 'anticsrf': 'true'});
+  const name = form.querySelector('input[name="name"]');
+  if (name && name.value.trim()) body.set('fields[name]', name.value.trim());
+  return fetch('https://assets.mailerlite.com/jsonp/' + ML_ACCOUNT + '/forms/' + id + '/subscribe', {method: 'POST', mode: 'no-cors', body});
+}
+function sfNetlify(form) {
+  const body = new URLSearchParams(new FormData(form)).toString();
+  return fetch('/', {method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body})
+    .then(response => { if (!response.ok) throw new Error('Netlify form ' + response.status); });
+}
 document.querySelectorAll('form[data-netlify]').forEach(form => {
   form.addEventListener('submit', event => {
-    const mlId = ML_FORMS[form.getAttribute('name')];
-    const email = form.querySelector('input[type=email]');
-    if (productionHost && mlId && email && email.value) {
-      // Adds the requester to the matching MailerLite follow-up (three emails). Netlify still receives the form.
-      const body = new URLSearchParams({'fields[email]': email.value, 'ml-submit': '1', 'anticsrf': 'true'});
-      try { fetch('https://assets.mailerlite.com/jsonp/2622985/forms/' + mlId + '/subscribe', {method: 'POST', mode: 'no-cors', keepalive: true, body}); } catch (e) {}
-    }
+    event.preventDefault();
+    const status = form.querySelector('.form-status');
     if (!productionHost) {
-      event.preventDefault();
-      const status = form.querySelector('.form-status');
       status.hidden = false;
       status.textContent = 'Preview only: nothing was sent. This form will submit after the site is deployed to Netlify with form detection enabled.';
+      return;
     }
+    if (form.dataset.sending) return;
+    form.dataset.sending = '1';
+    const button = form.querySelector('button[type="submit"]');
+    if (button) button.disabled = true;
+    if (status) { status.hidden = false; status.textContent = 'Sending...'; }
+    const mailerLite = sfTimeout(sfMailerLite(form), 5000).catch(() => {});
+    const netlify = sfTimeout(sfNetlify(form), 10000);
+    Promise.all([netlify, mailerLite])
+      .then(() => { location.assign(form.action); })
+      // If the background send fails, fall back to a normal form post so the note still reaches Netlify.
+      .catch(() => { HTMLFormElement.prototype.submit.call(form); });
   });
 });
 // Preserve the existing, separate K–12 MailerLite subscription.
