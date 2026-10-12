@@ -195,3 +195,7 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 
 /* Ideas page: show the full text card images (900 x 473) without cropping */
 .editorial-card img{aspect-ratio:900/473;max-height:none}
+/* Testimonials across the site and small-voice lines (October 12, 2026) */
+.sf-quotes{margin-top:64px}.sf-book-quote{margin:32px 0 0;max-width:46rem;border-left:3px solid var(--gold);padding-left:20px}.sf-book-quote blockquote{font-family:var(--font-display);font-style:italic;font-size:var(--text-lg);line-height:1.5}.sf-book-quote figcaption{margin-top:12px;font-size:var(--text-sm);color:var(--muted)}.sf-book-quote strong{color:var(--teal)}
+.form-lead{margin:0;font-size:var(--text-sm);color:var(--muted)}.field-hint{margin-top:6px;font-size:var(--text-sm);color:var(--muted)}
+.footer-note{font-size:var(--text-sm);opacity:.85;margin-bottom:var(--space-3)}.article-end{font-family:var(--font-display);font-style:italic;font-size:var(--text-lg);color:var(--teal);margin-bottom:16px}

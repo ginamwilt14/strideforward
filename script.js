@@ -20,7 +20,9 @@ document.addEventListener('keydown', event => {
 });
 const theme = document.querySelector('.theme-button');
 function updateThemeLabel() {
-  theme.setAttribute('aria-label', `Switch to ${document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'} mode`);
+  const dark = document.documentElement.dataset.theme === 'dark';
+  theme.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
+  theme.title = dark ? 'Back to daylight.' : 'Late night? Switch to dark mode.';
 }
 theme.addEventListener('click', () => {
   document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
@@ -62,6 +64,11 @@ function sfNetlify(form) {
   return fetch('/', {method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body})
     .then(response => { if (!response.ok) throw new Error('Netlify form ' + response.status); });
 }
+// A friendlier message when an email address is mistyped.
+document.querySelectorAll('form input[type="email"]').forEach(input => {
+  input.addEventListener('invalid', () => { if (input.validity.typeMismatch) input.setCustomValidity('That email looks like it is missing a piece. Mind checking it?'); });
+  input.addEventListener('input', () => input.setCustomValidity(''));
+});
 document.querySelectorAll('form[data-netlify]').forEach(form => {
   form.addEventListener('submit', event => {
     event.preventDefault();
@@ -75,7 +82,7 @@ document.querySelectorAll('form[data-netlify]').forEach(form => {
     form.dataset.sending = '1';
     const button = form.querySelector('button[type="submit"]');
     if (button) button.disabled = true;
-    if (status) { status.hidden = false; status.textContent = 'Sending...'; }
+    if (status) { status.hidden = false; status.textContent = form.getAttribute('name') === 'contact' ? 'Sending your note to Gina...' : 'Pulling your copy off the shelf...'; }
     const mailerLite = sfTimeout(sfMailerLite(form), 5000).catch(() => {});
     const netlify = sfTimeout(sfNetlify(form), 10000);
     Promise.all([netlify, mailerLite])
