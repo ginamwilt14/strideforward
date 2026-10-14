@@ -4,6 +4,9 @@ https://gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
 http://www.gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
 http://gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
 
+# Build plugin code (IndexNow) lives in the repo but is not part of the site.
+/netlify/* /404.html 404!
+
 # Path compatibility only. Domain migration is deliberately separate.
 /services /services.html 200
 /about /about.html 200
