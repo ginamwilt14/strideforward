@@ -2,3 +2,12 @@
   publish = "."
 
 # No build command: upload this folder as a complete static site.
+
+# IndexNow: after each production deploy, tell Bing which pages changed.
+# Code and notes: netlify/plugins/indexnow/index.js. The key must match the
+# file <key>.txt at the site root.
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+  [plugins.inputs]
+    key = "fe2ba921e280a3ba6ae4f00a9d05547c"
+    host = "www.strideforward.world"
