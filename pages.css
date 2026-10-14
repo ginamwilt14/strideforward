@@ -281,3 +281,20 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .fn-rings text.r-you-label{fill:#2C2416}
 .gv-try.fn-checkable label{font-size:1rem;font-weight:400}
 .gv-try.fn-checkable label span{font-size:1rem;color:var(--ink);font-weight:400}
+/* Field note kit, part 2 (October 14, 2026): "Send my notes" by email through MailerLite, with an optional two-week check-in */
+.fn-actions{display:block}
+.fn-mail{margin:0 0 1.1rem;padding:1rem 1.1rem 1.1rem;background:var(--soft);border:1px solid var(--line)}
+.fn-mail .fn-mail-label{display:block;margin:0 0 .5rem;font-family:var(--font-display);font-size:1.2rem;font-weight:400;line-height:1.3;color:var(--ink)}
+.fn-mail-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.fn-mail-row input{flex:1 1 14rem;min-height:44px;width:auto;background:var(--surface)}
+.fn-mail-row button{flex:none}
+.fn-mail .fn-mail-check{display:flex;gap:.6rem;align-items:flex-start;margin:.8rem 0 0;font-size:.95rem;font-weight:400;line-height:1.45;color:var(--ink);cursor:pointer}
+.fn-mail .fn-mail-check input{flex:none;width:1.15rem;height:1.15rem;margin:.15rem 0 0;padding:0;accent-color:var(--teal);cursor:pointer}
+.fn-mail .fn-mail-check span{font-size:.95rem;color:var(--ink);font-weight:400}
+.fn-mail .fn-mail-fine{margin:.7rem 0 0;font-size:.82rem;line-height:1.5;color:var(--muted)}
+.fn-actions .fn-mail-fine a,.fn-actions .fn-mail-fine a:hover{display:inline;min-height:0;padding:0;border:0;background:none;color:var(--muted);font-weight:400;font-size:inherit;text-decoration:underline;text-underline-offset:3px}
+.fn-notes .fn-more-label{margin:0 0 .5rem;font-size:.9rem;color:var(--muted)}
+.fn-more{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 .9rem}
+@media print{.fn-mail,.fn-more-label{display:none!important}}
+.article-body ul.fn-jump{padding-left:0;margin-left:0}
+.fn-memory-dl{margin:.85rem 0 0;font-size:.95rem}.fn-memory-dl a{color:var(--teal);font-weight:600;text-decoration:underline;text-underline-offset:3px}

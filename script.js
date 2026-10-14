@@ -123,7 +123,12 @@ window.addEventListener('message', event => {
 });
 // Field note notes (October 2026). "Your turn" answers and checklist ticks save in this browser, per page,
 // and collect in the "Your notes" panel, where readers can email, text, copy, or download them.
-// Nothing is sent to StrideForward: email and text open the reader's own apps.
+// Nothing leaves the browser unless the reader sends it. "Send my notes" posts to two MailerLite forms
+// (GMW Group LLC account): the notes form saves the notes in custom fields and an automation emails them
+// right away; the check-in form (only when the box is ticked) starts a 14-day check-in email.
+// MailerLite text fields hold at most 1,024 characters, so notes are split across two fields and capped.
+const ML_NOTES_FORM = '201330261104788995';   // StrideForward — Email my notes
+const ML_CHECKIN_FORM = '201330262115616153'; // StrideForward — Field note check-in (14 days)
 (function sfNotes() {
   const panel = document.querySelector('[data-fn-notes]');
   const turns = Array.from(document.querySelectorAll('.fn-turn textarea'));
@@ -267,6 +272,46 @@ window.addEventListener('message', event => {
     });
     const share = panel.querySelector('[data-fn-share]');
     if (share) share.href = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent('I thought this might be useful: ' + pageUrl);
+    const mail = panel.querySelector('[data-fn-mail]');
+    if (mail) mail.addEventListener('submit', event => {
+      event.preventDefault();
+      if (mail.dataset.sending) return;
+      if (!hasNotes()) { say('Write an answer or check off a step first, then send.'); return; }
+      const email = mail.querySelector('input[type=email]').value.trim();
+      const checkin = !!(mail.querySelector('input[name="checkin"]') || {}).checked;
+      if (!productionHost) { say('Preview only: nothing was sent. On the live site, your notes would go to ' + email + '.'); return; }
+      const button = mail.querySelector('button[type="submit"]');
+      mail.dataset.sending = '1';
+      if (button) button.disabled = true;
+      say('Sending your notes...');
+      const BLANK = '​'; // invisible; replaces an earlier field note's value without showing anything
+      const cap = (s, n) => s.length > n ? s.slice(0, n - 12) + '\n(trimmed)' : s;
+      const answers = turns.map(ta => [prompts[ta.id], (state.answers[ta.id] || '').trim()]).filter(p => p[1]).map(p => p[0] + '\n' + p[1]).join('\n\n');
+      const notes = cap(answers, 2000);
+      const checked = steps.filter(s => state.checks[s.id]);
+      const stepText = checked.length ? cap('Steps you checked off:\n' + checked.map(s => '- ' + s.text).join('\n'), 1000) : '';
+      const body = new URLSearchParams({
+        'fields[email]': email,
+        'fields[field_note_title]': title.slice(0, 1000),
+        'fields[field_note_link]': pageUrl,
+        'fields[field_note_notes]': notes.slice(0, 1000) || BLANK,
+        'fields[field_note_notes_more]': notes.slice(1000) || BLANK,
+        'fields[field_note_steps]': stepText || BLANK,
+        'ml-submit': '1', 'anticsrf': 'true'
+      });
+      const post = (id, data) => sfTimeout(fetch('https://assets.mailerlite.com/jsonp/' + ML_ACCOUNT + '/forms/' + id + '/subscribe', {method: 'POST', mode: 'no-cors', body: data}), 8000);
+      const posts = [post(ML_NOTES_FORM, body)];
+      if (checkin) posts.push(post(ML_CHECKIN_FORM, new URLSearchParams({'fields[email]': email, 'ml-submit': '1', 'anticsrf': 'true'})));
+      Promise.all(posts).then(() => {
+        say('Sent. Your notes should reach ' + email + ' in a few minutes. If they do not, check your spam folder.' + (checkin ? ' Your check-in arrives in two weeks.' : ''));
+        sfga('sf_notes_send', {method: 'mailerlite', page: path, checkin: checkin ? 'yes' : 'no'});
+      }).catch(() => {
+        say('That did not go through. Try again in a minute, or use Copy or Download below.');
+      }).finally(() => {
+        delete mail.dataset.sending;
+        if (button) button.disabled = false;
+      });
+    });
   }
   render();
 })();
