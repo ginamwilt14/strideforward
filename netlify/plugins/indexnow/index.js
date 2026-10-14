@@ -28,6 +28,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const { pageInfo, cleanUrl } = require('./lib');
 
 const STATE_FILE = 'indexnow-commit.txt';
 const LIVE_COMMIT_TMP = path.join(os.tmpdir(), 'strideforward-indexnow-live-commit');
@@ -57,35 +58,6 @@ function hasCommit(sha, cwd) {
   } catch {
     return false;
   }
-}
-
-function attr(tag, name) {
-  const m = tag.match(new RegExp(`\\b${name}\\s*=\\s*"([^"]*)"`, 'i'));
-  return m ? m[1] : null;
-}
-
-function pageInfo(html) {
-  let canonical = null;
-  let noindex = false;
-  for (const tag of html.match(/<link\b[^>]*>/gi) || []) {
-    if ((attr(tag, 'rel') || '').toLowerCase() === 'canonical') {
-      canonical = attr(tag, 'href');
-      break;
-    }
-  }
-  for (const tag of html.match(/<meta\b[^>]*>/gi) || []) {
-    if ((attr(tag, 'name') || '').toLowerCase() === 'robots' && /noindex/i.test(attr(tag, 'content') || '')) {
-      noindex = true;
-    }
-  }
-  return { canonical, noindex };
-}
-
-// The site's clean URL rules: no .html, a trailing slash only for folder index pages.
-function cleanUrl(origin, file) {
-  if (file === 'index.html') return `${origin}/`;
-  if (file.endsWith('/index.html')) return `${origin}/${file.slice(0, -'index.html'.length)}`;
-  return `${origin}/${file.slice(0, -'.html'.length)}`;
 }
 
 function pageUrls({ base, head, repoDir, publishDir, origin, host }) {
@@ -224,4 +196,5 @@ async function onSuccess({ inputs, constants, utils }) {
   }
 }
 
-module.exports = { onPreBuild, onSuccess, _test: { pageInfo, cleanUrl, pageUrls } };
+// Netlify treats every exported name as a build event, so export only events.
+module.exports = { onPreBuild, onSuccess };
