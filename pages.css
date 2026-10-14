@@ -207,3 +207,77 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .also-heading{margin-top:72px}.also-intro{margin-top:12px;max-width:46rem;color:inherit;opacity:.85}.also-grid{grid-template-columns:repeat(2,1fr)}
 @media(max-width:650px){.also-grid{grid-template-columns:1fr}.also-heading{margin-top:48px}}
 .hero-footnote{font-size:var(--text-sm)}
+
+/* Field note kit (October 2026): skim aids, memory visuals, "Your turn" notes, and the notes panel.
+   Used by field notes that opt in; behavior lives in script.js (sfNotes). One gold element per component. */
+.fn-jump{display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;align-items:baseline;margin:-.75rem 0 2.5rem;padding:0;list-style:none;font-size:.92rem}
+.fn-jump li{margin:0!important}
+.fn-jump .fn-jump-lead{color:var(--muted)}
+.fn-jump a{color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.fn-bigidea{margin:2.5rem 0;padding:1.75rem 0 1.5rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.fn-bigidea::before{content:"";position:absolute;top:-2px;left:0;width:72px;height:3px;background:var(--gold)}
+.fn-bigidea blockquote{margin:0;font-family:var(--font-display);font-size:clamp(1.45rem,2.6vw,1.95rem);line-height:1.3;color:var(--teal);letter-spacing:-.015em;max-width:30ch}
+.fn-bigidea figcaption{margin-top:.75rem;font-size:.9rem;color:var(--muted)}
+.fn-memory{margin:2.5rem 0;padding:clamp(1.25rem,3vw,2rem);background:var(--surface);border:1px solid var(--line)}
+.fn-memory h3{margin:0 0 .35rem!important;color:var(--ink)}
+.fn-memory .fn-memory-sub{margin:0 0 1.5rem;color:var(--muted);font-size:.95rem}
+.fn-rings{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(1.25rem,3vw,2.25rem);align-items:center}
+.fn-rings svg{width:100%;height:auto}
+.fn-rings .r-culture{fill:var(--soft)}.fn-rings .r-mentors{fill:var(--surface)}.fn-rings .r-peers{fill:var(--soft)}.fn-rings .r-space{fill:var(--surface)}
+.fn-rings circle{stroke:var(--line);stroke-width:1.5}
+.fn-rings .r-you{fill:var(--gold);stroke:none}
+.fn-rings text{font-family:var(--font-body);font-size:13px;font-weight:600;fill:var(--teal);text-anchor:middle;letter-spacing:.01em}
+.fn-rings text.r-you-label{fill:var(--ink);font-weight:500;font-size:12px}
+.fn-rings ul{list-style:none!important;padding:0!important;margin:0!important}
+.fn-rings li{margin:0 0 1rem!important;padding-left:1rem;border-left:3px solid var(--teal);line-height:1.55;font-size:1rem}
+.fn-rings li:last-child{margin-bottom:0!important}
+.fn-rings li strong{display:block;font-family:var(--font-display);font-weight:500;font-size:1.12rem;color:var(--ink)}
+.fn-memory .fn-memory-foot{margin:1.5rem 0 0;font-size:.95rem;color:var(--ink)}
+.fn-acro{list-style:none!important;padding:0!important;margin:0!important;border-top:1px solid var(--line)}
+.fn-acro li{display:grid;grid-template-columns:3.25rem 1fr;gap:.25rem 1rem;align-items:baseline;margin:0!important;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.fn-acro .fn-letter{grid-row:span 2;font-family:var(--font-display);font-size:2.4rem;line-height:1;color:var(--teal);text-align:center}
+.fn-acro .fn-lesson{font-weight:600;color:var(--ink);line-height:1.4}
+.fn-acro .fn-ask{color:var(--muted);font-size:.95rem;line-height:1.5}
+.fn-quote{margin:2rem 0;padding:.25rem 0 .25rem 1.25rem;border-left:3px solid var(--gold)}
+.fn-quote blockquote{margin:0;font-family:var(--font-display);font-style:italic;font-size:1.4rem;line-height:1.35;color:var(--teal)}
+.fn-quote figcaption{margin-top:.5rem;font-size:.9rem;color:var(--muted)}
+.fn-turn{margin:2.25rem 0;padding:1.25rem 1.25rem 1rem;background:var(--soft);border:1px solid var(--line)}
+.fn-turn label{display:block;margin:0 0 .75rem;font-family:var(--font-display);font-size:1.2rem;line-height:1.35;color:var(--ink)}
+.fn-turn label span{display:block;font-family:var(--font-body);font-size:.8rem;font-weight:600;color:var(--teal);margin-bottom:.3rem}
+.fn-turn textarea{display:block;width:100%;min-height:6.6em;resize:vertical;font:inherit;font-size:1rem;color:var(--ink);line-height:1.65em;padding:.15em .75rem;border:1px solid var(--line);border-radius:0;background-color:var(--surface);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.65em - 1px),var(--line) calc(1.65em - 1px),var(--line) 1.65em);background-attachment:local;background-position:0 .15em}
+.fn-turn textarea:focus{outline:3px solid var(--teal);outline-offset:2px}
+.fn-turn .fn-saved{min-height:1.4em;margin:.5rem 0 0;font-size:.85rem;color:var(--muted)}
+.gv-try.fn-checkable li{padding-left:0!important}
+.gv-try.fn-checkable li::before{display:none}
+.gv-try.fn-checkable label{display:flex;gap:.75rem;align-items:flex-start;cursor:pointer;line-height:1.5}
+.gv-try.fn-checkable input{flex:none;width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--teal);cursor:pointer}
+.gv-try.fn-checkable input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.gv-try .fn-progress{margin:.5rem 0 0;font-size:.9rem;font-weight:600;color:var(--teal);min-height:1.4em}
+.fn-notes{margin:2.75rem 0;padding:clamp(1.25rem,3vw,1.75rem);background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--teal)}
+.fn-notes h2{margin:0 0 .4rem!important;font-size:1.6rem!important}
+.fn-notes .fn-notes-sub{margin:0 0 1.25rem;color:var(--muted);font-size:.95rem}
+.fn-notes-list{margin:0 0 1.25rem;padding:0;list-style:none}
+.fn-notes-list li{margin:0 0 .9rem;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.fn-notes-list li:last-child{border-bottom:0;padding-bottom:0}
+.fn-notes-list .q{display:block;font-size:.85rem;font-weight:600;color:var(--teal);margin-bottom:.2rem}
+.fn-notes-list .a{display:block;white-space:pre-wrap;line-height:1.55}
+.fn-notes-empty{margin:0 0 1.25rem;padding:1rem;border:1px dashed var(--line);color:var(--muted);font-size:.95rem}
+.fn-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 .9rem}
+.fn-actions button,.fn-actions a{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 1rem;border:1px solid var(--teal);background:transparent;color:var(--teal);font-weight:600;font-size:.92rem;text-decoration:none;border-radius:0}
+.fn-actions .fn-primary{background:var(--teal);color:var(--bg)}
+.fn-actions button:hover,.fn-actions a:hover{background:var(--deep);border-color:var(--deep);color:var(--cream)}
+.fn-actions button:disabled{opacity:.45;cursor:not-allowed}
+.fn-notes .fn-status{min-height:1.4em;margin:0 0 .5rem;font-size:.9rem;color:var(--teal);font-weight:600}
+.fn-notes .fn-privacy{margin:0;font-size:.85rem;color:var(--muted)}
+.fn-notes .fn-small{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:.85rem;cursor:pointer}
+.fn-notes .fn-share{margin:1rem 0 0;font-size:.95rem}
+.fn-notes .fn-share a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+[data-theme=dark] .fn-actions .fn-primary{color:#142527}
+[data-theme=dark] .fn-actions button:hover,[data-theme=dark] .fn-actions a:hover{color:#F5F0E8}
+@media(max-width:720px){.fn-rings{grid-template-columns:1fr}.fn-rings svg{max-width:280px;margin-inline:auto}}
+@media print{.fn-actions,.fn-notes .fn-small,.fn-notes .fn-share,.fn-jump{display:none!important}.fn-turn textarea{background-image:none}}
+.article-body .fn-bigidea blockquote,.article-body .fn-quote blockquote{border:0;background:none;padding:0;margin:0}
+.article-body ul.fn-notes-list{padding-left:0}
+.fn-rings text.r-you-label{fill:#2C2416}
+.gv-try.fn-checkable label{font-size:1rem;font-weight:400}
+.gv-try.fn-checkable label span{font-size:1rem;color:var(--ink);font-weight:400}

@@ -121,3 +121,152 @@ document.querySelectorAll('form[data-netlify]').forEach(form => {
 window.addEventListener('message', event => {
   if (event.origin === 'https://calendly.com' && event.data && event.data.event === 'calendly.event_scheduled') sfga('sf_call_booked', {page: location.pathname});
 });
+// Field note notes (October 2026). "Your turn" answers and checklist ticks save in this browser, per page,
+// and collect in the "Your notes" panel, where readers can email, text, copy, or download them.
+// Nothing is sent to StrideForward: email and text open the reader's own apps.
+(function sfNotes() {
+  const panel = document.querySelector('[data-fn-notes]');
+  const turns = Array.from(document.querySelectorAll('.fn-turn textarea'));
+  const tries = Array.from(document.querySelectorAll('.gv-try[data-fn-check]'));
+  if (!panel && !turns.length && !tries.length) return;
+  const path = location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
+  const KEY = 'sf_notes:' + path;
+  let state = {answers: {}, checks: {}};
+  try { const raw = localStorage.getItem(KEY); if (raw) { const s = JSON.parse(raw); state.answers = s.answers || {}; state.checks = s.checks || {}; } } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); return true; } catch (e) { return false; } };
+  const h1 = document.querySelector('h1');
+  const title = h1 ? h1.textContent.trim() : document.title;
+  const pageUrl = 'https://www.strideforward.world' + path;
+  const prompts = {};
+  turns.forEach(ta => {
+    const label = document.querySelector('label[for="' + ta.id + '"]');
+    const lead = label && label.querySelector('span');
+    prompts[ta.id] = label ? label.textContent.replace(lead ? lead.textContent : '', '').trim() : ta.id;
+    if (state.answers[ta.id]) ta.value = state.answers[ta.id];
+    const status = ta.parentElement.querySelector('.fn-saved');
+    let timer;
+    ta.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const v = ta.value.trim();
+        if (v) state.answers[ta.id] = ta.value; else delete state.answers[ta.id];
+        const ok = save();
+        if (status) status.textContent = !ok ? 'This browser is not saving notes. Copy your answer before you leave.' : (v ? 'Saved to your notes at the end of this page.' : '');
+        render();
+      }, 400);
+    });
+  });
+  const steps = [];
+  tries.forEach((box, b) => {
+    const items = Array.from(box.querySelectorAll('ul > li'));
+    const progress = box.querySelector('.fn-progress');
+    box.classList.add('fn-checkable');
+    items.forEach((li, i) => {
+      const id = 'c' + b + '-' + i;
+      const text = li.textContent.trim();
+      steps.push({id, text});
+      li.innerHTML = '';
+      const label = document.createElement('label');
+      const input = document.createElement('input');
+      input.type = 'checkbox'; input.checked = !!state.checks[id];
+      const span = document.createElement('span'); span.textContent = text;
+      label.append(input, span); li.append(label);
+      input.addEventListener('change', () => {
+        if (input.checked) state.checks[id] = true; else delete state.checks[id];
+        save(); update(true); render();
+      });
+    });
+    function update(fromClick) {
+      const done = items.filter((li, i) => state.checks['c' + b + '-' + i]).length;
+      if (!progress) return;
+      if (done === 0) progress.textContent = '';
+      else if (done < items.length) progress.textContent = done + ' of ' + items.length + ' done.';
+      else {
+        progress.textContent = 'All ' + items.length + ' done. Future you says thanks.';
+        if (fromClick) sfga('sf_checklist_complete', {page: path});
+      }
+    }
+    update(false);
+  });
+  function compose() {
+    const lines = ['My notes from "' + title + '"', pageUrl, ''];
+    turns.forEach(ta => { const v = (state.answers[ta.id] || '').trim(); if (v) lines.push(prompts[ta.id], v, ''); });
+    const checked = steps.filter(s => state.checks[s.id]);
+    if (checked.length) { lines.push('Steps I checked off:'); checked.forEach(s => lines.push('- ' + s.text)); lines.push(''); }
+    lines.push('From StrideForward field notes: https://www.strideforward.world/blog/');
+    return lines.join('\n');
+  }
+  const hasNotes = () => turns.some(ta => (state.answers[ta.id] || '').trim()) || steps.some(s => state.checks[s.id]);
+  function render() {
+    if (!panel) return;
+    const list = panel.querySelector('[data-fn-list]');
+    const buttons = panel.querySelectorAll('[data-fn-send]');
+    buttons.forEach(btn => { btn.disabled = !hasNotes(); });
+    if (!list) return;
+    list.innerHTML = '';
+    if (!hasNotes()) {
+      const p = document.createElement('p'); p.className = 'fn-notes-empty';
+      p.textContent = 'Nothing here yet. Answer a Your turn prompt or check off a step above, and it will show up here.';
+      list.append(p); return;
+    }
+    const ul = document.createElement('ul'); ul.className = 'fn-notes-list';
+    turns.forEach(ta => {
+      const v = (state.answers[ta.id] || '').trim(); if (!v) return;
+      const li = document.createElement('li');
+      const q = document.createElement('span'); q.className = 'q'; q.textContent = prompts[ta.id];
+      const a = document.createElement('span'); a.className = 'a'; a.textContent = v;
+      li.append(q, a); ul.append(li);
+    });
+    const checked = steps.filter(s => state.checks[s.id]);
+    if (checked.length) {
+      const li = document.createElement('li');
+      const q = document.createElement('span'); q.className = 'q'; q.textContent = 'Steps you checked off';
+      const a = document.createElement('span'); a.className = 'a'; a.textContent = checked.map(s => '• ' + s.text).join('\n');
+      li.append(q, a); ul.append(li);
+    }
+    list.append(ul);
+  }
+  if (panel) {
+    const actions = panel.querySelector('.fn-actions');
+    if (actions) actions.hidden = false;
+    const status = panel.querySelector('.fn-status');
+    const say = msg => { if (status) status.textContent = msg; };
+    panel.querySelectorAll('[data-fn-send]').forEach(btn => btn.addEventListener('click', () => {
+      const how = btn.getAttribute('data-fn-send');
+      const text = compose();
+      sfga('sf_notes_send', {method: how, page: path});
+      if (how === 'email') {
+        location.href = 'mailto:?subject=' + encodeURIComponent('My notes: ' + title) + '&body=' + encodeURIComponent(text);
+        say('Your email app should open with your notes. Add your own address and send.');
+      } else if (how === 'text') {
+        location.href = 'sms:?&body=' + encodeURIComponent(text);
+        say('Your messages app should open with your notes. Pick yourself as the recipient and send.');
+      } else if (how === 'copy') {
+        const done = () => say('Copied. Paste them anywhere you keep notes.');
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => say('Copy did not work here. Try Download instead.'));
+        else say('Copy is not available in this browser. Try Download instead.');
+      } else if (how === 'download') {
+        const blob = new Blob([text], {type: 'text/plain'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'strideforward-notes-' + (path.split('/').filter(Boolean).pop() || 'field-note') + '.txt';
+        document.body.append(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+        say('Downloaded. Look for a .txt file in your downloads.');
+      }
+    }));
+    const clear = panel.querySelector('[data-fn-clear]');
+    if (clear) clear.addEventListener('click', () => {
+      if (clear.dataset.armed !== '1') { clear.dataset.armed = '1'; clear.textContent = 'Click again to clear everything'; setTimeout(() => { clear.dataset.armed = ''; clear.textContent = 'Clear my notes'; }, 4000); return; }
+      state = {answers: {}, checks: {}}; save();
+      turns.forEach(ta => { ta.value = ''; const s = ta.parentElement.querySelector('.fn-saved'); if (s) s.textContent = ''; });
+      tries.forEach(box => box.querySelectorAll('input[type=checkbox]').forEach(i => { i.checked = false; }));
+      tries.forEach(box => { const p = box.querySelector('.fn-progress'); if (p) p.textContent = ''; });
+      clear.dataset.armed = ''; clear.textContent = 'Clear my notes';
+      say('Cleared. A fresh page.'); render();
+    });
+    const share = panel.querySelector('[data-fn-share]');
+    if (share) share.href = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent('I thought this might be useful: ' + pageUrl);
+  }
+  render();
+})();
