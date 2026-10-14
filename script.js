@@ -23,6 +23,8 @@ function updateThemeLabel() {
   const dark = document.documentElement.dataset.theme === 'dark';
   theme.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
   theme.title = dark ? 'Back to daylight.' : 'Late night? Switch to dark mode.';
+  const label = theme.querySelector('.theme-text');
+  if (label) label.textContent = dark ? 'Light' : 'Dark';
 }
 theme.addEventListener('click', () => {
   document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
