@@ -1,0 +1,8 @@
+name: strideforward-indexnow
+inputs:
+  - name: key
+    required: true
+    description: IndexNow key. A file named <key>.txt holding the same key must sit at the site root.
+  - name: host
+    default: www.strideforward.world
+    description: The site's canonical host. Only page URLs on this host are sent.
