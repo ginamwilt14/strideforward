@@ -113,6 +113,7 @@ document.addEventListener('click', event => {
   if (/#book$|^\/book$|calendly\.com/.test(href)) sfga('sf_book_click', {cta_text: text, cta_section: sfSection(link)});
   else if (/#deck$|^\/deck$/.test(href)) sfga('sf_deck_click', {cta_text: text, cta_section: sfSection(link)});
   else if (/^mailto:/.test(href)) sfga('sf_email_click', {cta_section: sfSection(link)});
+  else if (/^tel:/.test(href)) sfga('sf_phone_click', {cta_section: sfSection(link)});
 });
 document.querySelectorAll('form[data-netlify]').forEach(form => {
   form.addEventListener('submit', () => sfga('sf_form_submit', {form_name: form.getAttribute('name')}));
