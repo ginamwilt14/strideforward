@@ -49,9 +49,8 @@ const ML_FORMS = {
   'pilot-plan-download': '201454295709648266',      // Pilot Plan: 3 emails
   'situation-map-download': '201454296833721896',   // Situation Map: 3 emails
   'learner-card-download': '201454297837209358',    // Build for the LEARNER card: 3 emails
-  'contact': '201049857072301553'                   // Write first: receipt email
-  // 'field-notes-signup': no MailerLite form yet (October 16, 2026). Signups from /blog and the end of each
-  // field note are kept in Netlify Forms until a StrideForward field notes form and group exist in MailerLite; add its id here.
+  'contact': '201049857072301553',                  // Write first: receipt email
+  'field-notes-signup': '201530866575344865'         // Field notes (/blog and the end of each field note): group "StrideForward — Field notes"
 };
 function sfTimeout(promise, ms) {
   return Promise.race([promise, new Promise((resolve, reject) => setTimeout(() => reject(new Error('timeout')), ms))]);
