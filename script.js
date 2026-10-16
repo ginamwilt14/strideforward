@@ -144,6 +144,21 @@ const ML_CHECKIN_FORM = '201330262115616153'; // StrideForward — Field note ch
   const title = h1 ? h1.textContent.trim() : document.title;
   const pageUrl = 'https://www.strideforward.world' + path;
   const prompts = {};
+  // Tell readers up front that answers are kept and can be emailed (first Your turn box only).
+  let canSave = true;
+  try { localStorage.setItem('sf_notes_test', '1'); localStorage.removeItem('sf_notes_test'); } catch (e) { canSave = false; }
+  if (turns.length && panel) {
+    const first = turns[0];
+    const hint = document.createElement('p');
+    hint.className = 'fn-hint';
+    hint.id = first.id + '-hint';
+    const link = document.createElement('a');
+    link.href = '#your-notes';
+    link.textContent = 'email your notes to yourself';
+    hint.append(canSave ? 'Your answers save in this browser as you type. At the end, you can ' : 'This browser is not saving answers, so before you leave, ', link, '.');
+    first.before(hint);
+    first.setAttribute('aria-describedby', hint.id);
+  }
   turns.forEach(ta => {
     const label = document.querySelector('label[for="' + ta.id + '"]');
     const lead = label && label.querySelector('span');
