@@ -312,3 +312,12 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .sf-call-list li{padding-left:14px;border-left:3px solid var(--gold)}
 .sf-call-page{border:0;border-top:1px solid var(--line);background:none;padding-inline:var(--space-6)}
 @media(max-width:650px){.sf-call{padding:var(--space-5)}.sf-call .button{width:100%;justify-content:center}}
+/* Field notes signup (October 16, 2026): /blog and the end of each field note */
+.sf-signup{padding-block:40px}
+.sf-signup-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start;background:var(--surface);border-top:3px solid var(--gold);padding:32px}
+.sf-signup h2{font-size:clamp(1.5rem,2.6vw,2.1rem);margin:0 0 12px}
+.sf-signup-inner>div>p:not(.eyebrow){color:var(--muted);max-width:46ch}
+.sf-signup-form{display:grid;gap:16px}
+.sf-signup-form .button{justify-self:start}
+.sf-signup-form .small-note{margin-top:0}
+@media(max-width:800px){.sf-signup-inner{grid-template-columns:1fr;gap:24px;padding:24px}}
