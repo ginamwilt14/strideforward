@@ -304,3 +304,11 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .sf-sms-consent input{flex:none;width:1.1rem;height:1.1rem;padding:0;margin-top:.2rem;accent-color:var(--teal);cursor:pointer}
 .sf-sms-consent span{font-size:.85rem;color:var(--muted)}
 .sf-sms-consent a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+/* What happens on the call (Website Desk, October 16, 2026) */
+.sf-call{border:1px solid var(--line);border-left:4px solid var(--gold);background:var(--surface);padding:var(--space-6);margin-block:var(--space-8)}
+.sf-call h3{margin-bottom:var(--space-4)}
+.article-body .sf-call a.button{color:var(--bg);text-decoration:none;margin-top:0}
+.article-body ul.sf-call-list,.sf-call-list{list-style:none;padding:0;margin:var(--space-5) 0 var(--space-6);display:grid;gap:var(--space-3);max-width:70ch}
+.sf-call-list li{padding-left:14px;border-left:3px solid var(--gold)}
+.sf-call-page{border:0;border-top:1px solid var(--line);background:none;padding-inline:var(--space-6)}
+@media(max-width:650px){.sf-call{padding:var(--space-5)}.sf-call .button{width:100%;justify-content:center}}
