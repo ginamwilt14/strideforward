@@ -50,6 +50,8 @@ const ML_FORMS = {
   'situation-map-download': '201454296833721896',   // Situation Map: 3 emails
   'learner-card-download': '201454297837209358',    // Build for the LEARNER card: 3 emails
   'contact': '201049857072301553'                   // Write first: receipt email
+  // 'field-notes-signup': no MailerLite form yet (October 16, 2026). Signups from /blog and the end of each
+  // field note are kept in Netlify Forms until a StrideForward field notes form and group exist in MailerLite; add its id here.
 };
 function sfTimeout(promise, ms) {
   return Promise.race([promise, new Promise((resolve, reject) => setTimeout(() => reject(new Error('timeout')), ms))]);
@@ -85,9 +87,13 @@ document.querySelectorAll('form[data-netlify]').forEach(form => {
     }
     if (form.dataset.sending) return;
     form.dataset.sending = '1';
+    // Count one sf_form_submit per real send (not preview clicks, repeat clicks, or filled honeypots).
+    const trap = form.querySelector('[name="bot-field"]');
+    if (!(trap && trap.value)) sfga('sf_form_submit', {form_name: form.getAttribute('name')});
     const button = form.querySelector('button[type="submit"]');
     if (button) button.disabled = true;
-    if (status) { status.hidden = false; status.textContent = form.getAttribute('name') === 'contact' ? 'Sending your note to Gina...' : 'Pulling your copy off the shelf...'; }
+    const sending = {'contact': 'Sending your note to Gina...', 'field-notes-signup': 'Adding you to the list...'};
+    if (status) { status.hidden = false; status.textContent = sending[form.getAttribute('name')] || 'Pulling your copy off the shelf...'; }
     const mailerLite = sfTimeout(sfMailerLite(form), 5000).catch(() => {});
     const netlify = sfTimeout(sfNetlify(form), 10000);
     Promise.all([netlify, mailerLite])
@@ -118,13 +124,28 @@ document.addEventListener('click', event => {
   else if (/^mailto:/.test(href)) sfga('sf_email_click', {cta_section: sfSection(link)});
   else if (/^tel:/.test(href)) sfga('sf_phone_click', {cta_section: sfSection(link)});
 });
-document.querySelectorAll('form[data-netlify]').forEach(form => {
-  form.addEventListener('submit', () => sfga('sf_form_submit', {form_name: form.getAttribute('name')}));
-});
-// Calendly's inline widget posts a message to this page when a call is booked.
+// sf_form_submit is sent from the form submit handler above, once per real send.
+// sf_call_booked, two ways, counted once per booking:
+// 1. Calendly's inline widget on /contact posts a message to this page when a call is booked.
+// 2. Calendly then sends the visitor to /thanks/booked with the booking details in the address. That page also
+//    counts the booking when the widget message did not (a booking made on calendly.com directly, or a lost message).
+function sfSession(key, value) { try { if (value === undefined) return sessionStorage.getItem(key); if (value === null) sessionStorage.removeItem(key); else sessionStorage.setItem(key, value); } catch (e) {} return null; }
 window.addEventListener('message', event => {
-  if (event.origin === 'https://calendly.com' && event.data && event.data.event === 'calendly.event_scheduled') sfga('sf_call_booked', {page: location.pathname});
+  if (event.origin !== 'https://calendly.com' || !event.data || event.data.event !== 'calendly.event_scheduled') return;
+  sfga('sf_call_booked', {page: location.pathname, booked_via: 'widget'});
+  sfSession('sf_call_booked', '1');
 });
+(function sfBookedPage() {
+  if (!/^\/thanks\/booked(\.html)?$/.test(location.pathname)) return;
+  const q = new URLSearchParams(location.search);
+  const start = q.get('event_start_time');
+  if (!start && !q.get('invitee_email') && !q.get('assigned_to')) return; // opened directly, not from a booking
+  const key = 'sf_call_booked:' + (start || q.get('invitee_email') || 'booked');
+  if (sfSession('sf_call_booked') === '1') { sfSession('sf_call_booked', null); sfSession(key, '1'); return; } // counted by the widget
+  if (sfSession(key) === '1') return; // page reload
+  sfga('sf_call_booked', {page: location.pathname, booked_via: 'redirect', source: (q.get('utm_source') || '').slice(0, 40)});
+  sfSession(key, '1');
+})();
 // Field note notes (October 2026). "Your turn" answers and checklist ticks save in this browser, per page,
 // and collect in the "Your notes" panel, where readers can email, text, copy, or download them.
 // Nothing leaves the browser unless the reader sends it. "Send my notes" posts to two MailerLite forms
