@@ -247,6 +247,7 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .fn-turn textarea{display:block;width:100%;min-height:6.6em;resize:vertical;font:inherit;font-size:1rem;color:var(--ink);line-height:1.65em;padding:.15em .75rem;border:1px solid var(--line);border-radius:0;background-color:var(--surface);background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.65em - 1px),var(--line) calc(1.65em - 1px),var(--line) 1.65em);background-attachment:local;background-position:0 .15em}
 .fn-turn textarea:focus{outline:3px solid var(--teal);outline-offset:2px}
 .fn-turn .fn-saved{min-height:1.4em;margin:.5rem 0 0;font-size:.85rem;color:var(--muted)}
+.fn-turn .fn-hint{margin:-.25rem 0 .75rem;font-size:.85rem;line-height:1.5;color:var(--muted)}.fn-turn .fn-hint a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .gv-try.fn-checkable li{padding-left:0!important}
 .gv-try.fn-checkable li::before{display:none}
 .gv-try.fn-checkable label{display:flex;gap:.75rem;align-items:flex-start;cursor:pointer;line-height:1.5}

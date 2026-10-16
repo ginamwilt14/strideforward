@@ -46,6 +46,9 @@ const ML_FORMS = {
   'problem-clarity-download': '199603719231243992', // Problem Clarity Worksheet: 3 emails
   'cx-blueprint-download': '201049592917133168',    // CX Blueprint kit: 3 emails
   'pl-planner-download': '201049757183903301',      // PL Session Planner: 1 email
+  'pilot-plan-download': '201454295709648266',      // Pilot Plan: 3 emails
+  'situation-map-download': '201454296833721896',   // Situation Map: 3 emails
+  'learner-card-download': '201454297837209358',    // Build for the LEARNER card: 3 emails
   'contact': '201049857072301553'                   // Write first: receipt email
 };
 function sfTimeout(promise, ms) {
@@ -144,6 +147,21 @@ const ML_CHECKIN_FORM = '201330262115616153'; // StrideForward — Field note ch
   const title = h1 ? h1.textContent.trim() : document.title;
   const pageUrl = 'https://www.strideforward.world' + path;
   const prompts = {};
+  // Tell readers up front that answers are kept and can be emailed (first Your turn box only).
+  let canSave = true;
+  try { localStorage.setItem('sf_notes_test', '1'); localStorage.removeItem('sf_notes_test'); } catch (e) { canSave = false; }
+  if (turns.length && panel) {
+    const first = turns[0];
+    const hint = document.createElement('p');
+    hint.className = 'fn-hint';
+    hint.id = first.id + '-hint';
+    const link = document.createElement('a');
+    link.href = '#your-notes';
+    link.textContent = 'email your notes to yourself';
+    hint.append(canSave ? 'Your answers save in this browser as you type. At the end, you can ' : 'This browser is not saving answers, so before you leave, ', link, '.');
+    first.before(hint);
+    first.setAttribute('aria-describedby', hint.id);
+  }
   turns.forEach(ta => {
     const label = document.querySelector('label[for="' + ta.id + '"]');
     const lead = label && label.querySelector('span');
