@@ -46,6 +46,9 @@ const ML_FORMS = {
   'problem-clarity-download': '199603719231243992', // Problem Clarity Worksheet: 3 emails
   'cx-blueprint-download': '201049592917133168',    // CX Blueprint kit: 3 emails
   'pl-planner-download': '201049757183903301',      // PL Session Planner: 1 email
+  'pilot-plan-download': '201454295709648266',      // Pilot Plan: 3 emails
+  'situation-map-download': '201454296833721896',   // Situation Map: 3 emails
+  'learner-card-download': '201454297837209358',    // Build for the LEARNER card: 3 emails
   'contact': '201049857072301553'                   // Write first: receipt email
 };
 function sfTimeout(promise, ms) {
