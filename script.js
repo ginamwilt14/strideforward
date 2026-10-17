@@ -60,9 +60,14 @@ function sfMailerLite(form) {
   const email = form.querySelector('input[type=email]');
   const trap = form.querySelector('[name="bot-field"]');
   if (!id || !email || !email.value || (trap && trap.value)) return Promise.resolve();
-  const body = new URLSearchParams({'fields[email]': email.value.trim(), 'ml-submit': '1', 'anticsrf': 'true'});
+  // Send as multipart FormData, the same way the NextReady and Thrive Vibes sites do; MailerLite's
+  // subscribe endpoint did not record the URL-encoded version (0 conversions on every StrideForward form).
+  const body = new FormData();
+  body.append('fields[email]', email.value.trim());
   const name = form.querySelector('input[name="name"]');
-  if (name && name.value.trim()) body.set('fields[name]', name.value.trim());
+  if (name && name.value.trim()) body.append('fields[name]', name.value.trim());
+  body.append('ml-submit', '1');
+  body.append('anticsrf', 'true');
   return fetch('https://assets.mailerlite.com/jsonp/' + ML_ACCOUNT + '/forms/' + id + '/subscribe', {method: 'POST', mode: 'no-cors', body});
 }
 function sfNetlify(form) {
