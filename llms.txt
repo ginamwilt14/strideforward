@@ -1,0 +1,48 @@
+# StrideForward
+
+> StrideForward is a consulting and program design practice in Phoenix, Arizona, and a GMW Group company. Gina Wilt, EdD, MBA, helps small businesses, nonprofits, and education ventures find the real problem, design a workable solution, and put it into practice, as a defined project or as fractional (embedded) support.
+
+Six services: market research and positioning, customer experience design, program development, new revenue services and products, business development and sales, and human-centered AI workflows and automation. Work starts with a free 30-minute discovery call; if it is a fit, a one-page scope note with the fee follows within two business days. Gina works with clients in person and remotely.
+
+## Main pages
+
+- [Home](https://www.strideforward.world/): What StrideForward does, who it serves, and how a first call goes.
+- [What we do](https://www.strideforward.world/services): The six services, the two ways to work (project or fractional), and what each service delivers.
+- [AI workflows](https://www.strideforward.world/ai-workflows): How StrideForward sets up AI workflows for small teams, with people making the calls.
+- [Education ventures](https://www.strideforward.world/education-ventures): Help for education startups and learning ventures with evidence, pilots, school buyers, and partnerships.
+- [About](https://www.strideforward.world/about): Who Gina Wilt is, her background, and how she works with clients.
+- [Example scope note](https://www.strideforward.world/scope-note-example): What the one-page scope note after a discovery call looks like.
+- [Contact](https://www.strideforward.world/contact): How to book a free discovery call or write first.
+- [Professional Learning (K–12)](https://www.strideforward.world/professional-learning): Facilitated sessions, coaching, and induction support for K–12 schools.
+
+## Field notes
+
+- [All field notes](https://www.strideforward.world/blog/): Articles for small business owners and nonprofit leaders.
+- [Stuck? You May Be Solving the Wrong Problem](https://www.strideforward.world/blog/solving-the-wrong-problem): How to separate a symptom from its cause before you spend.
+- [Market Research for Small Businesses and Nonprofits](https://www.strideforward.world/blog/market-intelligence-small-business-nonprofit): How to run a landscape review and act on it.
+- [Service Blueprints for Small Businesses and Nonprofits](https://www.strideforward.world/blog/service-blueprint-small-business): What a service blueprint is, its five parts, and how to use one.
+- [Why Customers and Donors Leave: Finding the Friction](https://www.strideforward.world/blog/experience-with-too-much-friction): Where friction hides in a customer or donor experience and how to fix it in 30 days.
+- [Is Your Strategic Plan Outdated?](https://www.strideforward.world/blog/strategy-no-longer-fits): How to tell whether a strategy still fits and what to do before you start over.
+- [Too Many Programs, Not Enough Revenue?](https://www.strideforward.world/blog/model-outgrown-revenue): How to decide which programs or offers to keep.
+- [Communities of Practice for Small Teams](https://www.strideforward.world/blog/community-of-practice-small-business-nonprofit): How a peer group works and how to start one.
+- [Claude Skills for Small-Team Sales Follow-Up](https://www.strideforward.world/blog/claude-skills-sales-follow-up): How to turn a sales process into an AI skill for replies and follow-up, with a person in charge.
+- [How to Build an Entrepreneurial Mindset in a Program](https://www.strideforward.world/blog/entrepreneurial-mindset-is-a-muscle): How programs build the mindset through decisions, tests, and recovery.
+- [Situational Agency for Small Teams](https://www.strideforward.world/blog/situational-agency-duckworth-situated): What Angela Duckworth's Situated means for setting up work.
+- [Building a Learning Product? Seven Lessons From EdTech Week](https://www.strideforward.world/blog/lessons-for-building-learning-products): Advice for teams building learning products.
+- [How Local Businesses and Community Groups Support Learning](https://www.strideforward.world/blog/learning-is-a-community-project): Practical ways a small business or community group can support learning.
+- [K–12 field notes](https://www.strideforward.world/blog/k12/): Notes on teacher voice, coaching, and professional learning.
+
+## Free tools
+
+- [Resources](https://www.strideforward.world/resources/): All free tools in one place.
+- [Problem Clarity Worksheet](https://www.strideforward.world/resources/problem-clarity-worksheet): A one-page worksheet to name the real problem and pick a two-week test.
+- [Customer Experience Blueprint Starter Kit](https://www.strideforward.world/resources/customer-experience-blueprint): Map an experience from the customer's side and choose one moment to improve.
+- [Pilot Plan](https://www.strideforward.world/resources/pilot-plan): A one-page plan for a small test of a new program, service, or offer.
+- [Situation Map](https://www.strideforward.world/resources/situation-map): A one-page map for finding one change to test on a task that keeps slipping.
+- [Build for the LEARNER card](https://www.strideforward.world/resources/build-for-the-learner): Seven questions for teams building a learning product.
+- [PL Session Planner](https://www.strideforward.world/resources/pl-session-planner): A planner for designing professional learning around classroom practice.
+
+## Contact
+
+- Email: hello@strideforward.world
+- Book a discovery call: https://www.strideforward.world/contact
