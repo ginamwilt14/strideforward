@@ -11,3 +11,8 @@
   [plugins.inputs]
     key = "fe2ba921e280a3ba6ae4f00a9d05547c"
     host = "www.strideforward.world"
+
+# Site version: writes the deploy's commit into each page's Google tag, so every
+# GA4 event carries site_version. Code and notes: netlify/plugins/site-version/index.js.
+[[plugins]]
+  package = "./netlify/plugins/site-version"
