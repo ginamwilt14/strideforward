@@ -80,7 +80,14 @@ document.querySelectorAll('form input[type="email"]').forEach(input => {
   input.addEventListener('invalid', () => { if (input.validity.typeMismatch) input.setCustomValidity('That email looks like it is missing a piece. Mind checking it?'); });
   input.addEventListener('input', () => input.setCustomValidity(''));
 });
-document.querySelectorAll('form[data-netlify]').forEach(form => {
+// Which forms get the background send. Netlify strips the data-netlify attribute from the published
+// HTML, so on the live site 'form[data-netlify]' matches nothing and every form submitted the old way:
+// Netlify received it, MailerLite never did (0 conversions from Sept 25 to Oct 16, 2026). The hidden
+// form-name input is the marker that survives publishing, so select by that; data-netlify still covers
+// previews served straight from the repo.
+const sfForms = new Set(document.querySelectorAll('form[data-netlify]'));
+document.querySelectorAll('form input[name="form-name"]').forEach(input => { if (input.form) sfForms.add(input.form); });
+sfForms.forEach(form => {
   form.addEventListener('submit', event => {
     event.preventDefault();
     const status = form.querySelector('.form-status');
