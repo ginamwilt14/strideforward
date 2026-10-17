@@ -64,8 +64,8 @@ function sfMailerLite(form) {
   // subscribe endpoint did not record the URL-encoded version (0 conversions on every StrideForward form).
   const body = new FormData();
   body.append('fields[email]', email.value.trim());
-  const name = form.querySelector('input[name="name"]');
-  if (name && name.value.trim()) body.append('fields[name]', name.value.trim());
+  // Email only: the StrideForward MailerLite forms have just an email box, and a submission carrying a
+  // field the form doesn't have (name) never shows up in MailerLite. Netlify still keeps the name.
   body.append('ml-submit', '1');
   body.append('anticsrf', 'true');
   return fetch('https://assets.mailerlite.com/jsonp/' + ML_ACCOUNT + '/forms/' + id + '/subscribe', {method: 'POST', mode: 'no-cors', body});
