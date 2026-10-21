@@ -2,13 +2,15 @@
 
 > StrideForward is a consulting and program design practice in Phoenix, Arizona, and a GMW Group company. Gina Wilt, EdD, MBA, helps small businesses, nonprofits, and education ventures find the real problem, design a workable solution, and put it into practice, as a defined project or as fractional (embedded) support.
 
-Six services: market research and positioning, customer experience design, program development, new revenue services and products, business development and sales, and human-centered AI workflows and automation. Work starts with a free 30-minute discovery call; if it is a fit, a one-page scope note with the fee follows within two business days. Gina works with clients in person and remotely.
+Six services: market research and positioning, customer experience design, program development, new revenue services and products, business development and sales, and human-centered AI workflows and automation. Build-for-you packages put the same help into set packages for owners who want the work done for them. Work starts with a free 30-minute discovery call; if it is a fit, a one-page scope note with the fee follows within two business days. Gina works with clients in person and remotely.
 
 ## Main pages
 
 - [Home](https://www.strideforward.world/): What StrideForward does, who it serves, and how a first call goes.
 - [What we do](https://www.strideforward.world/services): The six services, the two ways to work (project or fractional), and what each service delivers.
 - [AI workflows](https://www.strideforward.world/ai-workflows): How StrideForward sets up AI workflows for small teams, with people making the calls.
+- [Build-for-you packages](https://www.strideforward.world/packages): Done-for-you packages for small businesses, nonprofits, small teams, founders, and side hustlers: a one-job AI setup, an AI workflow starter, a website build, social media and email setup, an AI team build, an owner's command center, and monthly build and manage support. Costed in the scope note.
+- [Website build](https://www.strideforward.world/websites): Small, fast websites in the owner's voice, with forms that feed follow-up and search set up at launch, then a handover or monthly site care.
 - [Education ventures](https://www.strideforward.world/education-ventures): Help for education startups and learning ventures with evidence, pilots, school buyers, and partnerships.
 - [About](https://www.strideforward.world/about): Who Gina Wilt is, her background, and how she works with clients.
 - [Example scope note](https://www.strideforward.world/scope-note-example): What the one-page scope note after a discovery call looks like.

@@ -65,6 +65,13 @@ button{font:inherit;color:inherit}
 .brand{font-family:var(--display);font-weight:600;font-size:20px;color:var(--teal);letter-spacing:.005em;display:flex;align-items:center;gap:8px}
 .brand svg{flex:none}
 .brand small{font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.brand-home{display:inline-flex;align-items:center;gap:8px;color:inherit;text-decoration:none}
+.brand-home:hover{text-decoration:underline;text-underline-offset:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.qfoot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.qfoot p{margin:0 0 10px}
+.qfoot nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+.qfoot a{color:var(--teal);font-weight:600}
 .saved{font-size:13px;color:var(--muted)}
 
 /* progress path: steps that climb, each painted its room color */
@@ -295,8 +302,7 @@ details.deep .q:first-of-type{border-top:0}
   <p class="preview" id="previewNote">Preview for Gina: answers stay in this browser, and nothing is sent anywhere yet.</p>
   <header class="top">
     <div class="brand">
-      <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 19h9v-7h7" fill="none" stroke="var(--teal)" stroke-width="2.4"/><path d="M17 12V5h8" fill="none" stroke="var(--gold)" stroke-width="2.4"/></svg>
-      StrideForward <small>Website questionnaire</small>
+      <a class="brand-home" href="/" target="_blank" rel="noopener"><svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 19h9v-7h7" fill="none" stroke="var(--teal)" stroke-width="2.4"/><path d="M17 12V5h8" fill="none" stroke="var(--gold)" stroke-width="2.4"/></svg>StrideForward<span class="sr"> home (opens in a new tab)</span></a> <small>Website questionnaire</small>
     </div>
     <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="badge" id="badge" hidden></span><span class="saved" id="saved" aria-live="polite"></span></div>
   </header>
@@ -305,6 +311,7 @@ details.deep .q:first-of-type{border-top:0}
     <div class="where"><span id="whereText"></span><span id="countText"></span></div>
   </nav>
   <main id="main"></main>
+  <footer class="qfoot"><p>Your answers stay saved in this browser, so these open in a new tab and you won't lose your place.</p><nav aria-label="StrideForward"><a href="/" target="_blank" rel="noopener">StrideForward home</a><a href="/websites" target="_blank" rel="noopener">Website builds</a><a href="/packages" target="_blank" rel="noopener">All packages</a><a href="/privacy" target="_blank" rel="noopener">Privacy</a></nav></footer>
 </div>
 
 <script>
