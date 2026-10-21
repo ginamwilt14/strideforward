@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Google tag (gtag.js), G-3S51MNJVL0. Loads on strideforward.world only. Add ?internal=1 to any page URL to mark this browser as internal (excluded from reports); ?internal=0 clears it. Every event carries site_version (the deploy's commit, written in at build by netlify/plugins/site-version) and page_variant (the data-variant attribute on <html>, or "default"). -->
+<script>(function(){var h=location.hostname;if(h!=='www.strideforward.world'&&h!=='strideforward.world')return;var k='sf_internal',q=new URLSearchParams(location.search).get('internal');try{if(q==='1')localStorage.setItem(k,'1');if(q==='0')localStorage.removeItem(k);}catch(e){}var i=false;try{i=localStorage.getItem(k)==='1';}catch(e){}var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-3S51MNJVL0';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());var v='__SF_SITE_VERSION__',p={site_version:v.charAt(0)==='_'?'unknown':v,page_variant:document.documentElement.getAttribute('data-variant')||'default'};gtag('set',p);gtag('config','G-3S51MNJVL0',i?{traffic_type:'internal',site_version:p.site_version,page_variant:p.page_variant}:p);})();</script>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Your Website, Your Way | StrideForward</title>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="A friendly questionnaire to fill in before we build your website together." name="description"/>
+<meta content="#1D6A72" name="theme-color"/><link href="/assets/brand/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/assets/brand/favicon.ico" rel="alternate icon"/><link href="/assets/brand/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Caveat:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Kalam:wght@400;700&family=Nunito:wght@700&family=Playfair+Display:wght@600&display=swap">
+<style>
+/* Layout: one section per screen, like walking room to room; each room has its own color from a soft "paint chip" set, anchored by StrideForward teal and cream. */
+:root{
+  --bg:#F7F2EA; --surface:#FFFDF9; --ink:#2C2416; --muted:#635E54; --line:#DDD5C8;
+  --teal:#1D6A72; --teal-dark:#155258; --on-teal:#FFFDF9; --gold:#C9A84C;
+  --rose:#D9577A; --rose-ink:#A3365A; --rose-tint:#FBE7ED;
+  --sun:#E3A21A; --sun-ink:#8A5D00; --sun-tint:#FDF1D6;
+  --river:#1D7C86; --river-ink:#155258; --river-tint:#E2F2F3;
+  --onion:#5E9E4A; --onion-ink:#3B6E2C; --onion-tint:#E8F3E1;
+  --chive:#8A6BBE; --chive-ink:#5E4391; --chive-tint:#EFE9F8;
+  --sky:#3E73A8; --sky-ink:#2A5580; --sky-tint:#E4EDF7;
+  --berry:#C8433A; --berry-ink:#952D26; --berry-tint:#FBE5E2;
+  --peach:#E08A57; --peach-ink:#9A5228; --peach-tint:#FCEBDF;
+  --display:"Fraunces",Georgia,serif; --body:"DM Sans",Arial,sans-serif; --hand:"Kalam","Comic Sans MS",cursive;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#17141B; --surface:#211D26; --ink:#F5F0E8; --muted:#BDB5A8; --line:#3A3440;
+  --teal:#7CC3C9; --teal-dark:#A6D8DC; --on-teal:#10292C; --gold:#D9BC66;
+  --rose:#F08FAA; --rose-ink:#F6B3C5; --rose-tint:#3A2430;
+  --sun:#F2C35A; --sun-ink:#F6D58A; --sun-tint:#3A3020;
+  --river:#6CC4CC; --river-ink:#9AD9DE; --river-tint:#1E3436;
+  --onion:#9CD07F; --onion-ink:#B9E0A3; --onion-tint:#26331F;
+  --chive:#B9A0E6; --chive-ink:#D0BEF0; --chive-tint:#2E2640;
+  --sky:#86B3E2; --sky-ink:#AFCDEE; --sky-tint:#1F2B3A;
+  --berry:#F08C83; --berry-ink:#F5B0A9; --berry-tint:#3A2222;
+  --peach:#F2AE84; --peach-ink:#F6C7A9; --peach-tint:#3A2A20;
+  color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --bg:#17141B; --surface:#211D26; --ink:#F5F0E8; --muted:#BDB5A8; --line:#3A3440;
+  --teal:#7CC3C9; --teal-dark:#A6D8DC; --on-teal:#10292C; --gold:#D9BC66;
+  --rose:#F08FAA; --rose-ink:#F6B3C5; --rose-tint:#3A2430;
+  --sun:#F2C35A; --sun-ink:#F6D58A; --sun-tint:#3A3020;
+  --river:#6CC4CC; --river-ink:#9AD9DE; --river-tint:#1E3436;
+  --onion:#9CD07F; --onion-ink:#B9E0A3; --onion-tint:#26331F;
+  --chive:#B9A0E6; --chive-ink:#D0BEF0; --chive-tint:#2E2640;
+  --sky:#86B3E2; --sky-ink:#AFCDEE; --sky-tint:#1F2B3A;
+  --berry:#F08C83; --berry-ink:#F5B0A9; --berry-tint:#3A2222;
+  --peach:#F2AE84; --peach-ink:#F6C7A9; --peach-tint:#3A2A20;
+  color-scheme:dark; }
+
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 48px}
+.wrap{max-width:760px;margin:0 auto}
+a{color:var(--teal)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--c, var(--teal));outline-offset:2px}
+
+.preview{font-size:13px;color:var(--muted);text-align:center;padding:10px 0 0}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0 8px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:600;font-size:20px;color:var(--teal);letter-spacing:.005em;display:flex;align-items:center;gap:8px}
+.brand svg{flex:none}
+.brand small{font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.saved{font-size:13px;color:var(--muted)}
+
+/* progress path: steps that climb, each painted its room color */
+.path{display:flex;align-items:flex-end;gap:5px;margin:10px 0 4px;height:46px}
+.path button{flex:1;border:0;padding:0;cursor:pointer;background:transparent;display:flex;align-items:flex-end;height:100%}
+.path span{display:block;width:100%;border-radius:3px 3px 0 0;background:var(--line);transition:background .25s, transform .2s}
+.path button[data-state="done"] span{background:var(--c)}
+.path button[data-state="here"] span{background:var(--c);box-shadow:inset 0 0 0 2px var(--surface), 0 0 0 2px var(--c)}
+.path button:hover span{transform:translateY(-2px)}
+.where{font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.cheer{font-family:var(--hand);font-size:22px;line-height:1.3;color:var(--cink);margin:22px 0 0;transform:rotate(-1.2deg);transform-origin:left}
+.room{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:var(--r);padding:26px 24px 28px}
+.chip-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cink)}
+.chip-label i{display:inline-block;width:14px;height:14px;border-radius:3px;background:var(--c)}
+h1,h2{font-family:var(--display);font-weight:600;line-height:1.08;text-wrap:balance;margin:.25em 0 .3em}
+h1{font-size:clamp(40px,7vw,64px);color:var(--ink)}
+h2{font-size:clamp(28px,4.4vw,40px)}
+.lede{font-size:19px;color:var(--ink);max-width:60ch;margin:0}
+.intro{color:var(--muted);margin:0 0 6px;max-width:62ch}
+
+.q{padding:22px 0 4px;border-top:1px dashed var(--line);margin-top:20px}
+.q:first-of-type{border-top:0;margin-top:6px}
+.q > label, .q > .qlabel{display:block;font-weight:600;font-size:18px;line-height:1.4;margin-bottom:4px}
+.hint{font-size:14.5px;color:var(--muted);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 14px 7px 14px;cursor:pointer;font-size:15.5px;line-height:1.3;display:inline-flex;align-items:center;gap:7px;transition:transform .12s, background .2s, border-color .2s}
+.chip:hover{border-color:var(--c)}
+.chip[aria-pressed="true"]{background:var(--ctint);border-color:var(--c);color:var(--ink);font-weight:500}
+.chip[aria-pressed="true"]::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c);flex:none}
+.chip.unsure{border-style:dashed;color:var(--muted)}
+.chip.unsure[aria-pressed="true"]{color:var(--ink)}
+.pop{animation:pop .22s ease}
+@keyframes pop{50%{transform:scale(1.06)}}
+.limit{font-family:var(--hand);color:var(--cink);font-size:16px;min-height:1.4em;margin-top:6px}
+
+input[type=text],input[type=url],input[type=email],textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r);padding:10px 12px;margin-top:8px}
+input:focus,textarea:focus{border-color:var(--c, var(--teal));outline:none;box-shadow:0 0 0 3px var(--ctint, var(--river-tint))}
+textarea{min-height:92px;resize:vertical}
+.notebtn{background:none;border:0;padding:6px 0 0;color:var(--cink);font-weight:600;font-size:14.5px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* styles, fonts */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.tile{border:1.5px solid var(--line);background:var(--bg);border-radius:var(--r);padding:10px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:8px;min-width:0}
+.tile:hover{border-color:var(--c)}
+.tile[aria-pressed="true"]{border-color:var(--c);background:var(--ctint);box-shadow:0 0 0 2px var(--c)}
+.strip{display:flex;height:34px;border-radius:4px;overflow:hidden}
+.strip b{flex:1}
+.tile .name{font-size:14.5px;font-weight:600}
+.tile .sample{font-size:22px;line-height:1.2;overflow-wrap:anywhere}
+
+/* colors */
+.swatches{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;align-items:flex-start}
+.sw{display:flex;flex-direction:column;align-items:center;gap:4px;width:74px}
+.sw input[type=color]{width:64px;height:64px;border:1.5px solid var(--line);border-radius:10px;padding:3px;background:var(--surface);cursor:pointer}
+.sw code{font-size:12px;color:var(--muted)}
+.sw button,.mini{background:none;border:0;color:var(--muted);font-size:13px;cursor:pointer;text-decoration:underline}
+.sw button.addbtn{text-decoration:none;border:1.5px dashed var(--c);background:transparent;color:var(--cink);border-radius:10px;width:64px;height:64px;cursor:pointer;font-size:26px;line-height:1}
+
+/* links */
+.linkrow{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end;margin-top:6px}
+.linkrow input{margin-top:0}
+@media (max-width:560px){ .linkrow{grid-template-columns:1fr} }
+.ghost{border:1.5px dashed var(--c);background:transparent;color:var(--cink);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:15px;margin-top:10px}
+
+/* upload */
+.drop{margin-top:12px;border:2px dashed var(--c);border-radius:12px;background:var(--ctint);padding:22px;text-align:center;cursor:pointer;transition:transform .15s}
+.drop.over{transform:scale(1.01)}
+.drop strong{display:block;font-size:17px}
+.drop span{font-size:14px;color:var(--muted)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-top:12px}
+.thumb{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg);aspect-ratio:1;max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .doc{display:flex;align-items:center;justify-content:center;height:100%;font-size:12px;padding:6px;text-align:center;overflow-wrap:anywhere;color:var(--muted)}
+.thumb button{position:absolute;top:4px;right:4px;width:26px;height:26px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);cursor:pointer;font-size:15px;line-height:26px;padding:0}
+.meter{font-size:13.5px;color:var(--muted);margin-top:8px;font-variant-numeric:tabular-nums}
+
+/* socials */
+.soc{display:grid;gap:10px;margin-top:12px}
+.socd{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:var(--r);padding:12px 14px;background:var(--bg)}
+.socd h4{margin:0;font-size:16px}
+.socd .sub{font-size:14px;color:var(--muted);margin-top:8px}
+.socd .chips{margin-top:6px}
+
+/* scale */
+.scale{margin-top:14px}
+.scale input{width:100%;accent-color:var(--c)}
+.scale .ends{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted)}
+.scale output{display:block;font-family:var(--hand);font-size:22px;color:var(--cink);margin-top:2px}
+
+/* approach info */
+.how{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+@media (max-width:560px){ .how{grid-template-columns:1fr} }
+.card{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg)}
+.card h4{margin:0 0 4px;font-family:var(--display);font-size:20px;font-weight:600}
+.card p{margin:0;font-size:15.5px;color:var(--muted)}
+.steps3{margin:12px 0 0;padding-left:22px}
+.steps3 li{margin:4px 0}
+
+/* nav */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:26px;flex-wrap:wrap}
+.btn{background:var(--teal);color:var(--on-teal);border:0;border-radius:999px;padding:12px 22px;font-weight:600;font-size:16px;cursor:pointer}
+.btn:hover{background:var(--teal-dark)}
+.btn.back{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.skip{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:15px}
+
+/* welcome */
+.welcome .room{border-top-width:8px}
+.promises{list-style:none;padding:0;margin:18px 0 4px;display:grid;gap:10px}
+.promises li{display:flex;gap:10px;align-items:flex-start}
+.promises i{flex:none;width:12px;height:12px;border-radius:3px;margin-top:8px}
+.paint{display:flex;gap:6px;margin:6px 0 12px}
+.paint b{width:28px;height:10px;border-radius:2px}
+
+/* review */
+.rev h3{font-family:var(--display);font-size:22px;margin:22px 0 6px;display:flex;align-items:center;gap:10px}
+.rev h3 i{width:14px;height:14px;border-radius:3px;display:inline-block}
+.rev dl{margin:0;display:grid;gap:8px}
+.rev dt{font-size:14px;color:var(--muted)}
+.rev dd{margin:0 0 6px}
+.rev .edit{font-size:14px}
+.left{font-family:var(--hand);font-size:20px;color:var(--teal)}
+.copied{font-size:14px;color:var(--muted);margin-left:8px}
+.sendmsg{font-size:15px;color:var(--berry-ink);margin:10px 0 0;min-height:1.2em}
+.btn:disabled{opacity:.6;cursor:default}
+.thanks h1{margin-top:.1em}
+.next{padding-left:22px}
+
+/* ideas and tips that appear as you answer */
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+.badge::before{content:"";width:12px;height:12px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.ideas{display:grid;gap:8px;margin-top:10px}
+.idea{border-left:4px solid var(--c);background:var(--ctint);border-radius:0 8px 8px 0;padding:10px 14px;font-size:15.5px;line-height:1.5}
+.idea.new{animation:rise .35s ease}
+.idea b{font-family:var(--hand);font-weight:700;color:var(--cink);margin-right:8px;font-size:17px}
+@keyframes rise{from{transform:translateY(6px)}to{transform:none}}
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:12px}
+.board .idea{border-radius:8px;border-left-width:6px;min-width:0}
+details.deep{margin-top:24px;border:1.5px dashed var(--line);border-radius:var(--r);padding:2px 16px 14px;background:var(--bg)}
+details.deep > summary{cursor:pointer;font-weight:600;color:var(--cink);padding:12px 0}
+details.deep .q:first-of-type{border-top:0}
+.mins{font-size:13px;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;margin-left:6px}
+
+/* sneak peek: a tiny home page drawn from their answers */
+.peek-label{font-family:var(--hand);font-size:19px;color:var(--cink);margin:18px 0 0}
+.peek{margin-top:8px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);max-width:100%}
+.peek .bar{display:flex;gap:5px;padding:8px 10px;background:var(--bg);border-bottom:1px solid var(--line);align-items:center;min-width:0}
+.peek .bar i{width:9px;height:9px;border-radius:50%;background:var(--line);flex:none}
+.peek .bar span{font-size:12px;color:var(--muted);margin-left:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.peek .hero{padding:26px 22px 22px}
+.peek .t{font-size:clamp(24px,4vw,32px);line-height:1.1;margin:0 0 8px;overflow-wrap:anywhere}
+.peek .s{margin:0 0 16px;font-size:15px;max-width:46ch}
+.peek .cta{display:inline-block;padding:8px 18px;border-radius:999px;font-weight:600;font-size:14px}
+.peek .dots{display:flex;gap:6px;margin-top:18px}
+.peek .dots b{width:20px;height:20px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.55)}
+.peek .note{font-size:13px;color:var(--muted);padding:8px 12px;border-top:1px solid var(--line)}
+
+.react{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.react button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:3px 11px;font-size:13.5px;cursor:pointer}
+.react button:hover{border-color:var(--c)}
+.react button[aria-pressed="true"]{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c);font-weight:600}
+.idea.nah .txt{opacity:.55}
+.speakrow{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;margin-top:6px}
+.speak{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 12px;font-size:14px;cursor:pointer}
+.speak .dot{width:9px;height:9px;border-radius:50%;background:var(--c, var(--teal))}
+.speak.on{border-color:var(--c, var(--teal));font-weight:600}
+.speak.on .dot{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+.speakmsg{font-size:13.5px;color:var(--muted)}
+.ways{display:grid;gap:16px;margin-top:14px;padding:14px 16px;border:1.5px dashed var(--line);border-radius:10px;background:var(--bg)}
+.ways .lbl{font-weight:600;font-size:15px}
+.ways .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.ways .row input{flex:1 1 180px;margin-top:0;min-width:0}
+.ways > div > input{margin-top:6px}
+.small-btn{border:1.5px solid var(--c, var(--teal));background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 15px;cursor:pointer;font-weight:600;font-size:14.5px}
+.photo-pick canvas{display:block;max-width:100%;width:380px;height:auto;border-radius:8px;cursor:crosshair;margin-top:10px}
+.pal{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pal button{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 10px 4px 4px;cursor:pointer;font-size:13px;font-family:ui-monospace,Menlo,monospace;color:var(--ink)}
+.pal button i{width:22px;height:22px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.notearea{min-height:58px}
+.ideaslist{display:grid;gap:10px;margin-top:8px}
+.ideaslist .item{display:flex;gap:10px;align-items:flex-start}
+.ideaslist .num{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ctint);color:var(--cink);font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;margin-top:16px}
+.ideaslist .grow{flex:1;min-width:0}
+@media (max-width:560px){ .room{padding:20px 16px 22px} body{font-size:16px} }
+@media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} .cheer{transform:none} }
+</style>
+</head><body>
+<!-- Netlify Forms reads this hidden form at deploy time to learn the field names. The page sends answers with the same names from its script. -->
+<form name="website-questionnaire" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+<input type="hidden" name="form-name" value="website-questionnaire"/>
+<input name="bot-field"/>
+<input name="name"/>
+<input type="email" name="email"/>
+<textarea name="answers"></textarea>
+<textarea name="ideas"></textarea>
+<textarea name="sneak_peek"></textarea>
+<textarea name="room_01_you"></textarea>
+<textarea name="room_02_work"></textarea>
+<textarea name="room_03_people"></textarea>
+<textarea name="room_04_now"></textarea>
+<textarea name="room_05_socials"></textarea>
+<textarea name="room_06_dream"></textarea>
+<textarea name="room_07_look"></textarea>
+<textarea name="room_08_words"></textarea>
+<textarea name="room_09_practical"></textarea>
+<textarea name="room_10_future"></textarea>
+<input type="file" name="file_1"/>
+<input type="file" name="file_2"/>
+<input type="file" name="file_3"/>
+<input type="file" name="file_4"/>
+<input type="file" name="file_5"/>
+<input type="file" name="file_6"/>
+<input type="file" name="file_7"/>
+<input type="file" name="file_8"/>
+<input type="file" name="file_9"/>
+<input type="file" name="file_10"/>
+<input type="file" name="file_11"/>
+<input type="file" name="file_12"/>
+</form>
+<div class="wrap">
+  <p class="preview" id="previewNote">Preview for Gina: answers stay in this browser, and nothing is sent anywhere yet.</p>
+  <header class="top">
+    <div class="brand">
+      <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 19h9v-7h7" fill="none" stroke="var(--teal)" stroke-width="2.4"/><path d="M17 12V5h8" fill="none" stroke="var(--gold)" stroke-width="2.4"/></svg>
+      StrideForward <small>Website questionnaire</small>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="badge" id="badge" hidden></span><span class="saved" id="saved" aria-live="polite"></span></div>
+  </header>
+  <nav id="pathWrap" aria-label="Sections" hidden>
+    <div class="path" id="path"></div>
+    <div class="where"><span id="whereText"></span><span id="countText"></span></div>
+  </nav>
+  <main id="main"></main>
+</div>
+
+<script>
+(function(){
+const KEY = 'sf-website-questionnaire-v1';
+const UNSURE = 'Not sure yet';
+const C = (n) => ({c:`var(--${n})`, ink:`var(--${n}-ink)`, tint:`var(--${n}-tint)`});
+
+const SECTIONS = [
+ {id:'you', color:'rose', title:'You, the person behind it', intro:'Your site should feel like you. Before we get to pages, tell me about you.', qs:[
+  {id:'you_lights', t:'multi', label:'What lights you up?', opts:['Helping people','Solving problems','Making things','Teaching and sharing',"Seeing someone's face light up",'Building community','Doing it my own way'], note:'Tell me more'},
+  {id:'you_passions', t:'multi', label:'What are you passionate about outside of work?', opts:['Animals and pets','Travel','Food and cooking','The outdoors','Fitness','Art and design','Music','Reading','Family','Faith and community','Sports','Volunteering'], note:'Tell me more'},
+  {id:'you_exp', t:'multi', label:'What kinds of experiences light you up?', hint:'Trips, outings, or your idea of a perfect day off.', opts:['Beach days','Mountains and hiking','Big-city energy','Small-town charm','Museums and art','Food adventures','Concerts and festivals','Road trips','Theme parks','Camping under the stars','Cozy nights in','Spa days and slow mornings','Sports games','Wandering markets'], note:'A favorite moment'},
+  {id:'you_places', t:'text', label:'A place you love, near or far. What makes it special?', ph:'A city, a trail, a corner cafe, anywhere'},
+  {id:'you_dreamtrip', deep:true, t:'text', label:'A dream trip still on your list', ph:'Go big'},
+  {id:'you_words', t:'multi', max:3, label:'How would your closest friends describe you?', hint:'Pick up to three.', opts:['Warm','Funny','Calm','Bold','Thoughtful','Creative','Organized','Adventurous','Kind','Direct','Curious','Energetic','Steady','Quirky','Caffeinated'], note:'Their words, if you know them'},
+  {id:'you_show', t:'multi', label:'What parts of your personality would you love to see on your site?', hint:'For example, I love dogs, so my site has a find-the-Frenchie game.', opts:['My pets','A hobby','My sense of humor','A favorite color','Behind-the-scenes photos','A playful surprise or game','My story','Keep it mostly professional'], note:'Tell me more'},
+  {id:'you_keepoff', t:'multi', label:"Anything you'd rather keep off the site?", hint:'Totally fine to skip. Your site, your comfort level.', opts:['My photo','My family','Where I live','Prices','My personal story','Faith or politics','My social media','Reviews','Client photos or names',"Nothing, I'm an open book"], note:'Anything else'},
+  {id:'you_story', deep:true, t:'long', label:'A story you love telling about how you got here', ph:'A few lines is plenty'},
+  {id:'you_diff', deep:true, t:'long', label:'What makes you different from anyone else who does what you do?'},
+  {id:'you_share', deep:true, t:'long', label:"Something you'd love more people to know, that you haven't had a place to share"}
+ ]},
+ {id:'work', color:'sun', cheer:'Love that, {name}. Now, your work.', title:'Your work, and why it matters', intro:"The way you'd explain it to a friend is perfect.", qs:[
+  {id:'work_what', t:'long', label:'What do you do?'},
+  {id:'work_for', t:'single', label:'This site is for', opts:['A business I own','A business I work in','Me, as a professional','A nonprofit or group']},
+  {id:'work_name', t:'text', label:'The name you work under'},
+  {id:'work_where', t:'single', label:'Where do you work?', opts:['In my town','Across a region','Online, anywhere','A mix'], note:'Where, if you like'},
+  {id:'work_team', t:'single', label:"Who's on your team?", opts:['Just me','2 to 5 people','6 to 15','More than 15'], note:"Who you'd like on the site"},
+  {id:'work_why', deep:true, t:'long', label:'Why you started, and what keeps you going'},
+  {id:'work_proud', deep:true, t:'long', label:"What you're proudest of so far"},
+  {id:'work_title', t:'text', label:"Your title or credentials, as you'd like them shown"}
+ ]},
+ {id:'people', color:'river', cheer:'This is the good stuff.', title:'The people you love working with', intro:'Think about the people who make you glad you do this.', qs:[
+  {id:'ppl_visit', t:'multi', label:'Who do you picture visiting your site?', opts:['New clients or customers','People I already work with','Partners or referral sources','People who want to learn from me','Job seekers or volunteers','Event hosts or press']},
+  {id:'ppl_fav', deep:true, t:'long', label:'Your favorite people to work with. Describe one or two.'},
+  {id:'ppl_say', deep:true, t:'long', label:'What do they usually say after working with you?'},
+  {id:'ppl_find', t:'multi', label:'How do people find you today?', opts:['Friends and referrals','Google','Social media','Word of mouth','Events','Walking by','Directories or marketplaces']},
+  {id:'ppl_ask', t:'multi', label:'What do people ask most before they reach out?', opts:['Price','Availability','How it works','How long it takes','Location',"What's included",'Your experience and background','Credentials or training',"Who you've worked with","Whether it's right for them",'Can you start yesterday?','So... what is it you do again?','Can you do it for free?'], note:'Other questions you hear'},
+  {id:'ppl_do', t:'single', label:"When someone lands on your site, what's the one thing you'd love them to do?", opts:['Book','Call','Buy','Sign up','Say hello','Learn something']},
+  {id:'ppl_lang', t:'single', label:'Languages your people speak', opts:['English','English and Spanish','Another language too'], note:'Which ones'}
+ ]},
+ {id:'now', color:'onion', cheer:'Thank you. This next part is just between us.', title:"What's working, and what isn't", intro:'This part helps me build something that takes weight off your plate.', qs:[
+  {id:'now_yes', t:'multi', label:"What's working right now?", opts:['Word of mouth','Repeat clients','My social posts','My current website','Email','Events','Google reviews','Nothing yet'], note:'Why do you think it works?'},
+  {id:'now_no', t:'multi', label:"What isn't working the way you'd like?", opts:['My website','Keeping up with posts','Getting found online','Following up','Explaining what I do','Finding the time','The tech side'], note:'Tell me more'},
+  {id:'now_feel', t:'multi', label:'How does that make you feel?', opts:['Frustrated','Overwhelmed','Stuck','Behind','Unsure where to start','A little embarrassed','Like I need a nap',"Fine, it's just not a priority",'Excited to fix it'], note:'Say more, if you want'},
+  {id:'now_tried', t:'multi', label:"What have you already tried?", opts:['A site builder','Hiring someone','Posting more','A template','Asking a friend for help','Nothing yet'], note:'What did you learn?'},
+  {id:'now_hand', t:'multi', label:'If you could hand me one thing first, what would it be?', opts:['Updating the site','Social posts','Email newsletters','Answering the same questions','Booking and scheduling','Writing about myself','All of it, please'], note:'Something else'}
+ ]},
+ {id:'socials', color:'chive', cheer:"That's really helpful. Thank you.", title:'Your socials', intro:'No socials yet is completely fine. Tap the ones you use.', qs:[
+  {id:'soc_list', t:'socials', label:'Where are you now?'},
+  {id:'soc_best', deep:true, t:'long', label:'Which posts feel most like you, or get the best response? Why do you think that is?'},
+  {id:'soc_change', deep:true, t:'long', label:"A platform you've wanted to start, or one you'd love to stop"},
+  {id:'soc_email', t:'single', label:'Do you have an email list or newsletter?', opts:['Yes','Not yet',"I'd like one"]},
+  {id:'soc_size', t:'single', label:'About how many people are on it?', opts:['Under 100','100 to 500','500 to 2,000','Over 2,000']}
+ ]},
+ {id:'dream', color:'sky', cheer:'Halfway there. Time to dream a little.', title:'Dream it up', intro:"Let's dream first and get practical later.", qs:[
+  {id:'dr_big', t:'long', label:'If there were no limits, what would your site do or show?'},
+  {id:'dr_feel', t:'multi', max:3, label:'What should people feel in the first ten seconds?', hint:'Pick up to three.', opts:['Joyful','Welcomed','Inspired','Hopeful','Amazed','Moved','Seen','Calm','Excited','Energized','Confident','Safe','Cared for','Understood','Brave','Fired up','Curious','At home','Delighted','Like they found their people']},
+  {id:'dr_joy', t:'multi', label:'How do you want to bring joy or value to visitors, even the ones who never buy anything?', opts:['Free tips','A helpful guide or checklist','Something that makes them smile','Inspiration','A sense of community','A look behind the scenes'], note:'Tell me more'},
+  {id:'dr_features', t:'multi', label:'What would you love your site to have?', hint:"Tick anything that excites you. We'll pick what's ready for launch together.", opts:['Online booking','A way to get in touch','Prices or packages','Hours, location, and a map','A page for each service or product','Your story and your team','Intake or application forms','Online payments','Selling products','A gallery or portfolio','Kind words from clients','An email sign-up','Events or classes','Tips, articles, or a blog','Your social feeds','A client login link','Jobs or volunteer openings']},
+  {id:'dr_play', t:'scale', label:'How interactive should it be?', ends:['Keep it simple','Make it a playground'], steps:['Keep it simple','A touch of fun','A few fun extras','Lots to explore','Make it a playground']},
+  {id:'dr_things', t:'multi', label:'Any of these sound fun?', opts:['A quiz or "which one fits you" guide','A calculator or planner','A game or hidden surprise','Questions or polls','Booking, sign-ups, or payments on the site']},
+  {id:'dr_someday', t:'multi', label:"Something to add someday, even if it's not ready at launch", opts:['A shop','Classes','A podcast','A gallery','A community','Events'], note:'Something else'},
+  {id:'dr_tools', deep:true, t:'long', label:'What do you use now for scheduling, payments, email, and keeping track of people?', hint:'Names are enough. The site will connect to them where it can.'}
+ ]},
+ {id:'look', color:'berry', cheer:'Now the fun part: how it looks.', title:'How it should look and feel', intro:'Show me what you love. Pictures say a lot here.', qs:[
+  {id:'lk_style', t:'styles', max:3, label:'Which styles feel like you?', hint:'Pick up to three.'},
+  {id:'lk_colors', t:'colors', label:'Colors you love', hint:'Tap + to pick a color, type a hex code, or pull colors straight from a photo.'},
+  {id:'lk_fonts', t:'fonts', label:'Lettering that feels like you', hint:'Tap any that catch your eye.'},
+  {id:'lk_fontnames', t:'text', label:'Fonts you already love', ph:'Names, or describe them'},
+  {id:'lk_sites', t:'links', label:'Sites that inspire you', hint:"Any kind, in any field. Tell me what you love about each, or how you'd want yours to feel."},
+  {id:'lk_upload', t:'upload', label:'Drop in anything that inspires you', hint:'Color swatches, fonts, screenshots of sites, photos, mood boards, your logo.'},
+  {id:'lk_logo', t:'single', label:'Do you have a logo?', opts:['Yes, and I love it','Yes, but it needs love','Not yet']},
+  {id:'lk_avoid', deep:true, t:'long', label:"Anything that doesn't feel like you?"}
+ ]},
+ {id:'words', color:'peach', cheer:'Your style is coming through already.', title:'Your words, photos, and what you share', intro:'This is how your voice shows up on the site.', qs:[
+  {id:'wd_who', t:'single', label:'Who should write the words?', opts:["I'd love to write them",'Interview me and draft them in my voice','A mix']},
+  {id:'wd_blog', t:'single', label:'Would you like a blog or a place to share what you know?', opts:['Yes','Maybe later','Not for me']},
+  {id:'wd_posts', t:'list', label:"A couple of post ideas you'd love to share", hint:'Rough is perfect. A title or a few words each.', ph:['Like: 5 things I wish people knew before booking','Like: a day in my life, start to finish','Another idea']},
+  {id:'wd_topics', deep:true, t:'long', label:'What could you talk about for hours?', hint:'Topics, tips, or the questions people always ask you.'},
+  {id:'wd_format', t:'multi', label:'What format feels most like you?', opts:['Short tips','Longer articles','Videos','Photos','Free guides or downloads']},
+  {id:'wd_often', t:'single', label:'How often could you share without it feeling like a chore?', opts:['Weekly','Twice a month','Monthly','When inspiration strikes']},
+  {id:'wd_help', t:'single', label:'Writing posts yourself, or help turning ideas into posts?', opts:["I'll write them","I'd love help",'A mix']},
+  {id:'wd_photos', t:'multi', label:'Photos you have now', opts:['Of me','Of my team','Of my work','Of my space','Some professional shots','Not many yet']},
+  {id:'wd_kind', t:'single', label:'Kind words from people you have worked with?', hint:"We'd use only ones you have permission to share.", opts:['Yes, plenty','A few','Not yet']},
+  {id:'wd_rules', t:'single', label:'Does a license, an industry rule, or an employer require anything on your site?', opts:['Yes','No'], note:'What it requires'}
+ ]},
+ {id:'practical', color:'river', cheer:'Almost there. A few practical bits.', title:'How I build, and the practical bits', intro:"Not sure about any of these? Leave them, and we'll figure them out together.", info:true, qs:[
+  {id:'pr_after', t:'single', label:'After launch, which sounds better right now?', opts:['Hand it over to me','Keep it running for me','Decide later']},
+  {id:'pr_often', t:'single', label:'How often do you expect to change things?', opts:['Weekly','Monthly','A few times a year']},
+  {id:'pr_kinds', t:'multi', label:'What kinds of changes?', opts:['Prices','Hours','Photos','New services','Events','Articles']},
+  {id:'pr_domain', t:'single', label:'Do you own a web address (a domain)?', opts:['Yes','Not yet'], note:'Which one'},
+  {id:'pr_now', t:'single', label:"What's your site on now?", opts:['No site yet','Wix','Squarespace','WordPress','Something else']},
+  {id:'pr_gbp', t:'single', label:'Do you have a Google Business Profile?', opts:['Yes','No']},
+  {id:'pr_email', t:'text', label:'Which email should messages from the site go to?', kind:'email'},
+  {id:'pr_when', t:'single', label:'When would you love it live?', opts:['As soon as we can','In a month or two','No rush','Yesterday, ideally'], note:'Is a date driving it?'},
+  {id:'pr_budget', t:'single', label:'Budget', opts:["Let's talk on our call",'I have a range in mind'], note:'Your range, if you like'},
+  {id:'pr_ok', deep:true, t:'text', label:'Who else needs to see it before it goes live?'},
+  {id:'pr_comments', t:'long', label:'Questions or comments about how I build, or anything in this room?', ph:'Ask me anything'},
+  {id:'pr_nervous', deep:true, t:'long', label:"Anything about this that makes you nervous? I'd love to know."}
+ ]},
+ {id:'future', color:'rose', cheer:'Last one, and my favorite.', title:'A year from now', intro:'Picture it with me.', qs:[
+  {id:'fu_smile', t:'multi', label:'You open your site and smile. What do you see?', hint:'Tap everything that makes you smile.', opts:['My personality all over it','Photos that feel like me','Colors I love','My story told just right','A full calendar of bookings','Kind words from happy clients','People signing up','A message from someone new','Everything finally in one place',"Something I'm proud to share",'My pet making a cameo','Less on my to-do list'], note:'Paint the picture in your own words'},
+  {id:'fu_work', t:'multi', label:"How will you know it's working?", opts:['More bookings','More sales','Fewer repeat questions','More people on my list','Proud to share the link','More time back']},
+  {id:'fu_one', deep:true, t:'long', label:'If your site could do only one thing really well, what would it be?'},
+  {id:'fu_else', deep:true, t:'long', label:"Anything else you'd like me to know before we meet?"}
+ ]}
+];
+
+SECTIONS.forEach(sec => { if(sec.id !== 'words' && sec.id !== 'practical') return; sec.qs.forEach(q => { if(q.t === 'single' || q.t === 'multi'){ if(!q.note) q.note = sec.id === 'words' ? 'Add a note' : 'Add a comment'; q.noteOpen = true; } }); });
+const STYLES = [
+ ['Light and airy',['#F7F4EE','#DDE8EE','#EAD9D1','#A9C3CF']],
+ ['Warm and earthy',['#C9714A','#E8C9A0','#7A5A3A','#A3A87A']],
+ ['Bold and bright',['#F2385A','#F5A503','#4AD9D9','#36B1BF']],
+ ['Clean and minimal',['#FFFFFF','#E6E6E6','#9A9A9A','#1F1F1F']],
+ ['Playful',['#FF7AA2','#FFD23F','#3BCEAC','#7B61FF']],
+ ['Elegant',['#1C1C28','#C9A84C','#EDE6DA','#6B5B73']],
+ ['Natural',['#4F6D4A','#A3B18A','#DAD7CD','#8C6A4F']],
+ ['Retro',['#E76F51','#F4A261','#E9C46A','#2A9D8F']]
+];
+const FONTS = [
+ ['Classic and elegant','"Playfair Display", Georgia, serif'],
+ ['Clean and modern','"DM Sans", Arial, sans-serif'],
+ ['Friendly and rounded','"Nunito", "Trebuchet MS", sans-serif'],
+ ['Handwritten','"Caveat", "Comic Sans MS", cursive'],
+ ['Bold and fun','"Bricolage Grotesque", Impact, sans-serif'],
+ ['Warm and literary','"Fraunces", Georgia, serif']
+];
+const PLATFORMS = ['Instagram','Facebook','TikTok','LinkedIn','YouTube','Pinterest','Something else'];
+const MAXBYTES = 8 * 1024 * 1024;
+const IS_LIVE = /(^|\.)strideforward\.world$|\.netlify\.app$/.test(location.hostname);
+const SEND_LIMIT = 7.5 * 1024 * 1024;
+
+/* Ideas and tips that appear as people answer. Keys are question id | option. */
+const IDEAS = {
+ 'you_lights|Teaching and sharing': ['Idea', 'A free tips page or a one-page guide people can save. It shares what you know and gives them a reason to come back.'],
+ 'you_lights|Building community': ['Idea', 'A "join us" spot with your next gathering front and center.'],
+ "you_lights|Seeing someone's face light up": ['Idea', 'A kind-words wall, so visitors get to see those moments too.'],
+ 'you_lights|Making things': ['Idea', 'A gallery of your work that you can refresh with a few phone photos.'],
+ 'you_lights|Solving problems': ['Idea', `A short "here's how I help" story: the problem, what you did, how it felt after.`],
+ 'you_passions|Animals and pets': ['Idea', 'Let your pet make a cameo, on your About page or as a little friend hiding somewhere on the site.'],
+ 'you_passions|Travel': ['Idea', 'A photo strip from the places that shaped you, on your About page.'],
+ 'you_passions|Food and cooking': ['Idea', `A tiny favorites list, like the dish you'd make a new friend. It says a lot about who you are.`],
+ 'you_passions|The outdoors': ['Idea', 'Photos and textures from your favorite outdoor spot as your backdrop.'],
+ 'you_passions|Art and design': ['Idea', 'Your own artwork as section dividers or little background details.'],
+ 'you_passions|Music': ['Idea', `A "what I'm listening to" note on your About page. Small, personal, and easy to update.`],
+ 'you_passions|Volunteering': ['Idea', 'A "causes I care about" corner. People love knowing what you stand for.'],
+ 'you_exp|Beach days': ['Your vibe', `Sandy neutrals, ocean blues, and lots of breathing room.`],
+ 'you_exp|Mountains and hiking': ['Your vibe', `Forest greens, stone grays, and big open photos.`],
+ 'you_exp|Big-city energy': ['Your vibe', `Bold type, a confident grid, and a little after-dark sparkle.`],
+ 'you_exp|Small-town charm': ['Your vibe', `Friendly hand-lettered touches and a "come on in" welcome.`],
+ 'you_exp|Museums and art': ['Your vibe', `A gallery feel: white space, big images, and careful little captions.`],
+ 'you_exp|Food adventures': ['Your vibe', `Rich, warm colors and close-up photos that make people lean in.`],
+ 'you_exp|Concerts and festivals': ['Your vibe', `Bright color pops and a little movement on the page.`],
+ 'you_exp|Road trips': ['Your vibe', `A "where to next" spirit: postcards, sunny colors, and a map or two.`],
+ 'you_exp|Theme parks': ['Your vibe', `A playful surprise or two hidden around the site.`],
+ 'you_exp|Camping under the stars': ['Your vibe', `Deep night blues, warm firelight accents, and a cozy tone.`],
+ 'you_exp|Cozy nights in': ['Your vibe', `Warm tones, soft textures, and a "pull up a chair" welcome.`],
+ 'you_exp|Spa days and slow mornings': ['Your vibe', `Soft, calm colors, gentle photos, and an unhurried pace.`],
+ 'you_exp|Wandering markets': ['Your vibe', `A collected, colorful mix, like treasures found on a good wander.`],
+ 'dr_feel|Joyful': ['Tip', `For joy: one happy color, real smiles, and a first line that makes them grin.`],
+ 'dr_feel|Hopeful': ['Tip', `For hope: lead with what becomes possible, then show the first easy step.`],
+ 'dr_feel|Seen': ['Tip', `For seen: open with their words, the exact thing they're feeling, before you talk about you.`],
+ 'dr_feel|Amazed': ['Tip', `For amazed: one big, beautiful moment at the top, like a striking photo or a bit of motion.`],
+ 'dr_feel|Safe': ['Tip', `For safe: clear next steps, a real photo, and kind words from people you've helped.`],
+ 'you_show|My pets': ['Idea', 'A find-the-pet game, like my find-the-Frenchie hunt. People really do go looking.'],
+ 'you_show|A playful surprise or game': ['Idea', 'One small surprise, like a hidden detail that reacts when someone finds it.'],
+ 'you_show|My sense of humor': ['Idea', 'Playful button words and a funny "page not found" message. Little places where your voice can wink.'],
+ 'you_show|A favorite color': ['Idea', 'Build the whole palette around your favorite color, with two calm colors to let it shine.'],
+ 'you_show|Behind-the-scenes photos': ['Idea', 'A behind-the-scenes strip you can refresh with phone photos.'],
+ 'you_show|My story': ['Idea', 'Tell your story as a short timeline with a few photos. Easy to read, easy to love.'],
+ 'you_show|Keep it mostly professional': ['Tip', 'Professional can still feel like you: your words, one signature color, and a real photo.'],
+ 'you_keepoff|My photo': ['Tip', `No problem. Your workspace, your work, or a friendly illustration can carry the warmth instead.`],
+ 'you_keepoff|Where I live': ['Tip', `We can show the area you serve instead of an address.`],
+ 'you_keepoff|Prices': ['Tip', `We can invite people to ask for a quote, and share what affects the price so no one feels surprised.`],
+ 'you_keepoff|My family': ['Tip', `Got it. Your story can stay about your work and what you love doing.`],
+ "you_keepoff|Nothing, I'm an open book": ['From me', `I love that. We'll still pick the parts that tell your story best.`],
+ 'ppl_visit|People who want to learn from me': ['Idea', 'A "start here" page that points learners to your best free tips.'],
+ 'ppl_visit|Partners or referral sources': ['Idea', 'A short "work with me" page partners can send people to.'],
+ 'ppl_ask|Price': ['Tip', 'Even a "starting at" line or a few sample packages saves a lot of back-and-forth.'],
+ 'ppl_ask|How it works': ['Idea', 'A simple three-step "how it works" strip right on the home page.'],
+ "ppl_ask|Whether it's right for them": ['Idea', 'A "this is for you if..." list, or a three-question quiz that points them the right way.'],
+ 'ppl_ask|Your experience and background': ['Idea', `An About page that tells your story in a few lines, then lists the experience people ask about.`],
+ 'ppl_ask|Credentials or training': ['Tip', `A small credentials strip near the top builds trust fast.`],
+ "ppl_ask|Who you've worked with": ['Idea', `A "who I've helped" section with kind words or logos, shared with permission.`],
+ 'ppl_ask|How long it takes': ['Tip', `A simple "what to expect" timeline answers this before anyone asks.`],
+ 'ppl_ask|Can you start yesterday?': ['From me', `Ha. A clear "how soon we can start" note on your booking page saves you this one.`],
+ 'ppl_ask|So... what is it you do again?': ['Tip', `Then your first sentence matters most. We'll make it so clear your aunt could repeat it.`],
+ 'ppl_ask|Can you do it for free?': ['From me', `We've all heard it. A friendly "how I work" page sets expectations kindly, before anyone asks.`],
+ 'now_feel|Like I need a nap': ['From me', `Fair. Let's hand some of this off so you can take that nap.`],
+ 'now_hand|All of it, please': ['Good fit', `That's what monthly site care is for. You send a quick note, and I handle the rest.`],
+ 'pr_when|Yesterday, ideally': ['From me', `I hear you. We'll launch what matters most first, then keep adding.`],
+ 'now_no|Keeping up with posts': ['Tip', 'One idea can become a week of posts. I can set up a helper that drafts them in your voice.'],
+ 'now_no|Getting found online': ['Tip', 'A claimed Google Business Profile and clear page titles do a lot of quiet work.'],
+ 'now_no|Following up': ['Tip', 'A form that sends a friendly reply right away, so no one is left wondering.'],
+ 'now_no|Explaining what I do': ['Tip', `One clear sentence at the top of your home page, in the words your clients use. We'll write it together.`],
+ 'now_no|Finding the time': ['Tip', 'With monthly site care, you send me the change and it gets done.'],
+ 'now_no|The tech side': ['Good news', 'You never have to touch the tech unless you want to.'],
+ 'now_feel|Overwhelmed': ['From me', `You're not alone. We'll take this one small piece at a time.`],
+ 'now_feel|A little embarrassed': ['From me', `No need. Most people I talk with feel the same way, and it's very fixable.`],
+ 'now_feel|Stuck': ['From me', `Stuck usually means too many choices at once. We'll pick the first one together.`],
+ 'now_feel|Excited to fix it': ['From me', `Love that energy. Let's make it fun.`],
+ 'now_hand|Answering the same questions': ['Idea', 'A friendly "before you book" page that answers them for you.'],
+ 'now_hand|Booking and scheduling': ['Idea', 'Online booking on the site, so people can grab a time without the back-and-forth.'],
+ 'now_hand|Writing about myself': ['Good news', 'I can interview you and write it in your voice. Most people sound better through a friend\'s ears.'],
+ 'now_hand|Social posts': ['Idea', 'Your site and socials can share one calendar, so one idea shows up in both places.'],
+ 'now_hand|Email newsletters': ['Idea', 'A simple monthly note to your list, built from what you already post.'],
+ 'soc_list|None yet': ['Tip', 'Your website can be home base first. Socials can come later, or never.'],
+ 'soc_email|Not yet': ['Idea', 'A sign-up with a small thank-you, like a free guide, is a friendly way to start a list.'],
+ "soc_email|I'd like one": ['Idea', 'A sign-up with a small thank-you, like a free guide, is a friendly way to start a list.'],
+ 'dr_feel|Calm': ['Tip', 'For calm: lots of breathing room, soft colors, and fewer, bigger words.'],
+ 'dr_feel|Excited': ['Tip', 'For excited: bold color blocks and a big, confident first line.'],
+ 'dr_feel|At home': ['Tip', 'For at home: warm photos of real places and a friendly hello in your voice.'],
+ 'dr_feel|Delighted': ['Tip', 'For delight: one small surprise, like a hover effect or a hidden detail.'],
+ 'dr_feel|Confident': ['Tip', 'For confident: a clear promise up top and proof right under it, like kind words or results you can share.'],
+ 'dr_joy|Free tips': ['Idea', 'A "tip of the month" spot you can update in two minutes.'],
+ 'dr_joy|Something that makes them smile': ['Idea', 'A page just for fun, like a quiz or a little game.'],
+ 'dr_joy|A helpful guide or checklist': ['Idea', 'A one-page checklist people get when they join your list.'],
+ 'dr_joy|A look behind the scenes': ['Idea', 'A "day in the life" post with photos. People love seeing how things really work.'],
+ 'dr_things|A quiz or "which one fits you" guide': ['Idea', 'A three-question quiz that points people to the right service.'],
+ 'dr_things|A calculator or planner': ['Idea', 'A simple planner that helps people see what they need before they reach out.'],
+ 'dr_things|A game or hidden surprise': ['Idea', 'A hidden-object hunt across your pages. People love finding things.'],
+ 'dr_someday|A shop': ['Tip', `We can leave room for a shop now and open it when you're ready.`],
+ 'dr_someday|Classes': ['Tip', 'A simple dates page with sign-ups can grow into classes later.'],
+ 'lk_style|Playful': ['Your style', 'Playful: rounded shapes, a bright accent, and words that smile.'],
+ 'lk_style|Elegant': ['Your style', 'Elegant: generous spacing, a refined serif, and one rich accent.'],
+ 'lk_style|Bold and bright': ['Your style', 'Bold: big type, confident color blocks, and strong contrast.'],
+ 'lk_style|Natural': ['Your style', 'Natural: earthy tones, soft textures, and photos from outside.'],
+ 'lk_style|Light and airy': ['Your style', 'Light and airy: pale colors, lots of white space, and gentle photos.'],
+ 'lk_style|Warm and earthy': ['Your style', 'Warm and earthy: terracotta, sand, and olive, with cozy photos.'],
+ 'lk_style|Clean and minimal': ['Your style', 'Clean and minimal: one font, one accent, and nothing extra.'],
+ 'lk_style|Retro': ['Your style', 'Retro: sunny oranges and teals, chunky type, and a wink of nostalgia.'],
+ 'lk_logo|Not yet': ['Tip', 'A simple wordmark in a font you love can be your logo to start.'],
+ 'wd_blog|Yes': ['Idea', 'Start with three posts that answer the questions people ask you most.'],
+ 'wd_blog|Maybe later': ['Tip', 'We can leave a spot for it, ready when you are.'],
+ 'wd_format|Videos': ['Idea', 'Short videos can live on your site and your socials at once.'],
+ 'wd_photos|Not many yet': ['Tip', `A phone, window light, and ten minutes go a long way. I'll send you a simple shot list.`],
+ "wd_who|Interview me and draft them in my voice": ['Good news', `This is my favorite part. We talk, and I write it the way you sound.`],
+ 'pr_after|Keep it running for me': ['Good fit', `If you'd rather send a quick note than log in anywhere, this is for you.`],
+ 'pr_after|Hand it over to me': ['Good fit', `You'll get simple written steps, and I'm a message away if you get stuck.`],
+ 'pr_domain|Not yet': ['Easy', `I'll send three simple steps. It only takes a few minutes.`],
+ 'fu_smile|My pet making a cameo': ['From me', `Yes. Every site is better with a pet tucked in somewhere.`],
+ 'fu_smile|Everything finally in one place': ['Tip', `One home for booking, links, and updates means fewer places to keep up.`],
+ 'fu_smile|A full calendar of bookings': ['Tip', `Online booking with a friendly confirmation email makes that calendar fill itself.`],
+ 'fu_smile|Less on my to-do list': ['Good fit', `Monthly site care was made for this. You send a note, and it's done.`],
+ 'fu_work|Proud to share the link': ['From me', `That's the goal: a site you're happy to text to a friend.`],
+ 'fu_work|More time back': ['Tip', 'Booking, a "before you book" page, and a friendly auto-reply give back the most time.']
+};
+
+let state = {step:'welcome', name:'', a:{}};
+let uploads = [];
+let arrivedFrom = null;
+
+function load(){ try{ const raw = localStorage.getItem(KEY); if(raw){ const s = JSON.parse(raw); if(s && typeof s === 'object'){ state = Object.assign(state, s); } } }catch(e){} }
+let saveTimer = null;
+function save(){ afterChange(); if(state.sent) return; clearTimeout(saveTimer); saveTimer = setTimeout(()=>{ try{ localStorage.setItem(KEY, JSON.stringify(state)); setSaved('Saved in this browser'); }catch(e){ setSaved(''); } }, 300); }
+function setSaved(t){ const el = document.getElementById('saved'); if(el) el.textContent = t; }
+function A(id){ if(!state.a[id]) state.a[id] = {}; return state.a[id]; }
+function nm(){ return (state.name || '').trim(); }
+function fill(s){ const n = nm(); return s.replace(', {name}', n ? ', ' + n : '').replace('{name}', n || 'friend'); }
+function el(tag, attrs, ...kids){ const e = document.createElement(tag); if(attrs){ for(const k in attrs){ const v = attrs[k]; if(v === null || v === undefined || v === false) continue; if(k === 'class') e.className = v; else if(k === 'style') e.setAttribute('style', v); else if(k.startsWith('on')) e.addEventListener(k.slice(2), v); else if(k === 'text') e.textContent = v; else e.setAttribute(k, v === true ? '' : v); } } for(const kid of kids){ if(kid === null || kid === undefined || kid === false) continue; e.append(kid.nodeType ? kid : document.createTextNode(String(kid))); } return e; }
+function setColor(node, name){ const c = C(name); node.style.setProperty('--c', c.c); node.style.setProperty('--cink', c.ink); node.style.setProperty('--ctint', c.tint); }
+
+/* ideas */
+function ideasFor(q){ const v = state.a[q.id]; if(!v || !v.sel) return []; return v.sel.map(o => { const key = q.id + '|' + o; const x = IDEAS[key]; return x ? [x[0], x[1], key] : null; }).filter(Boolean); }
+function allIdeas(){ const out = []; SECTIONS.forEach(s => s.qs.forEach(q => ideasFor(q).forEach(([k, t, key]) => out.push({k, t, key, color: s.color})))); return out; }
+const REACTS = [['love','Love it'],['like','Like it'],['nah','Nah']];
+function reactRow(key, card){ state.r = state.r || {}; const row = el('div', {class:'react', role:'group', 'aria-label':'How do you feel about this idea?'}); REACTS.forEach(([val, label]) => { const b = el('button', {type:'button', 'aria-pressed': state.r[key] === val ? 'true' : 'false'}, label); b.addEventListener('click', () => { state.r[key] = state.r[key] === val ? '' : val; row.querySelectorAll('button').forEach((x, i) => x.setAttribute('aria-pressed', state.r[key] === REACTS[i][0] ? 'true' : 'false')); card.classList.toggle('nah', state.r[key] === 'nah'); save(); }); row.append(b); }); card.classList.toggle('nah', state.r[key] === 'nah'); return row; }
+function ideaCard(x, isNew){ const card = el('div', {class: 'idea' + (isNew ? ' new' : '')}); card.append(el('div', {class:'txt'}, el('b', null, x.k), x.t), reactRow(x.key, card)); return card; }
+function ideaBox(q){ const box = el('div', {class:'ideas', 'aria-live':'polite'}); let shown = new Set(ideasFor(q).map(x => x[1])); const draw = (animate) => { const now = ideasFor(q); box.innerHTML = ''; now.forEach(([k, t, key]) => box.append(ideaCard({k, t, key}, animate && !shown.has(t)))); shown = new Set(now.map(x => x[1])); }; draw(false); box.refresh = () => draw(true); return box; }
+function afterChange(){ const b = document.getElementById('badge'); if(b){ const n = allIdeas().length; b.hidden = !n; const loved = allIdeas().filter(x => (state.r || {})[x.key] === 'love').length; b.textContent = n ? `${n} idea${n === 1 ? '' : 's'} for you so far` + (loved ? ` · ${loved} loved` : '') : ''; } document.querySelectorAll('.peekslot').forEach(s => { s.innerHTML = ''; s.append(peekNode()); }); }
+
+/* sneak peek */
+function hexRgb(h){ const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); if(!m) return null; const n = parseInt(m[1], 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+function lum(h){ const c = hexRgb(h); if(!c) return 1; const f = x => { x /= 255; return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4); }; return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]); }
+function textOn(h){ return lum(h) > 0.36 ? '#1E1A16' : '#FFFFFF'; }
+function picks(id){ return ((state.a[id] || {}).sel || []).filter(x => x !== UNSURE); }
+function peekNode(){ const colors = ((state.a.lk_colors || {}).list || []).slice(); const style = picks('lk_style')[0]; const strip = style ? (STYLES.find(x => x[0] === style) || [])[1] : null; let bg, accent, dots; if(colors.length){ bg = colors[0]; accent = colors[1] || (strip ? strip[2] : '#C9A84C'); dots = colors.slice(0, 6); } else if(strip){ bg = strip[0]; accent = strip[2]; dots = strip; } else { bg = '#1D6A72'; accent = '#C9A84C'; dots = ['#D9577A','#E3A21A','#1D7C86','#5E9E4A','#8A6BBE']; } if(accent.toLowerCase() === bg.toLowerCase()) accent = textOn(bg); const font = (FONTS.find(f => f[0] === picks('lk_fonts')[0]) || FONTS[5])[1]; const title = ((state.a.work_name || {}).text || '').trim() || nm() || 'Your name here'; const what = ((state.a.work_what || {}).text || '').trim(); let line = what ? (what.length > 110 ? what.slice(0, what.lastIndexOf(' ', 108)) + '...' : what) : ''; const words = picks('you_words'); if(!line) line = words.length ? words.join(' · ') : 'One clear sentence about what you do, in your own words.'; const ctaMap = {'Book':'Book a time','Call':'Give me a call','Buy':'Shop now','Sign up':'Join the list','Say hello':'Say hello','Learn something':'Start here'}; const cta = ctaMap[picks('ppl_do')[0]] || 'Say hello'; const fg = textOn(bg); const hero = el('div', {class:'hero', style:`background:${bg};color:${fg}`}, el('p', {class:'t', style:`font-family:${font};color:${fg}`}, title), el('p', {class:'s', style:`color:${fg}`}, line), el('span', {class:'cta', style:`background:${accent};color:${textOn(accent)}`}, cta)); const dotRow = el('div', {class:'dots', 'aria-hidden':'true'}); dots.forEach(d => dotRow.append(el('b', {style:`background:${d}`}))); hero.append(dotRow); const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '') || 'yourname'; return el('div', {class:'peek', role:'img', 'aria-label': `Sketch of a home page titled ${title}`}, el('div', {class:'bar'}, el('i'), el('i'), el('i'), el('span', null, `${slug}.com`)), hero, el('div', {class:'note'}, 'A quick sketch from your answers. It changes as you pick colors, styles, and lettering.')); }
+function peekSlot(label){ const wrap = el('div'); wrap.append(el('p', {class:'peek-label'}, label)); const slot = el('div', {class:'peekslot'}); slot.append(peekNode()); wrap.append(slot); return wrap; }
+
+/* answered? */
+function answered(q){ const v = state.a[q.id]; if(!v) return false; if(q.t === 'text' || q.t === 'long') return !!(v.text && v.text.trim()); if(q.t === 'colors') return !!((v.list && v.list.length) || (v.words && v.words.trim())); if(q.t === 'links') return !!(v.list && v.list.some(r => (r.url||'').trim() || (r.why||'').trim())); if(q.t === 'list') return !!(v.items && v.items.some(x => (x||'').trim())); if(q.t === 'upload') return uploads.length > 0; if(q.t === 'scale') return typeof v.val === 'number'; if(q.t === 'socials') return !!(v.sel && v.sel.length); return !!((v.sel && v.sel.length) || (v.note && v.note.trim())); }
+function counts(){ let total = 0, done = 0; SECTIONS.forEach(s => s.qs.forEach(q => { total++; if(answered(q)) done++; })); return {total, done}; }
+
+/* path */
+function renderPath(){ const wrap = document.getElementById('pathWrap'); const path = document.getElementById('path'); const isSec = typeof state.step === 'number'; wrap.hidden = !(isSec || state.step === 'review'); path.innerHTML = ''; SECTIONS.forEach((s, i) => { const b = el('button', {type:'button', 'aria-label': `${i+1}. ${s.title}`, title: s.title, onclick: () => go(i)}); setColor(b, s.color); const here = state.step === i; const done = !here && s.qs.some(answered); b.dataset.state = here ? 'here' : (done ? 'done' : 'todo'); if(here) b.setAttribute('aria-current', 'step'); b.append(el('span', {style:`height:${Math.round(12 + i * 3.8)}px`})); path.append(b); }); const where = document.getElementById('whereText'); const cnt = document.getElementById('countText'); if(isSec){ where.textContent = `Room ${state.step + 1} of ${SECTIONS.length} · ${SECTIONS[state.step].title}`; } else { where.textContent = 'All rooms visited'; } const c = counts(); cnt.textContent = `${c.done} answer${c.done === 1 ? '' : 's'} so far`; }
+
+function go(step){ arrivedFrom = (typeof state.step === 'number' && typeof step === 'number' && step === state.step + 1) ? state.step : null; state.step = step; save(); render(); window.scrollTo({top:0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
+
+/* question renderers */
+function noteBox(q, v){ const box = el('div'); if(!q.note) return box; const area = el('textarea', {id:`${q.id}_note`, class:'notearea', placeholder: q.note, 'aria-label': q.note}); area.value = v.note || ''; area.addEventListener('input', () => { v.note = area.value; save(); renderPathCounts(); }); const pane = el('div', null, area, speakButton(area, val => { v.note = val; })); if(q.noteOpen){ box.append(pane); return box; } const show = !!(v.note && v.note.trim()); pane.hidden = !show; const btn = el('button', {type:'button', class:'notebtn', 'aria-expanded': show ? 'true' : 'false'}, show ? 'Note' : `+ ${q.note}`); btn.addEventListener('click', () => { pane.hidden = !pane.hidden; btn.setAttribute('aria-expanded', pane.hidden ? 'false' : 'true'); if(!pane.hidden) area.focus(); }); box.append(btn, pane); return box; }
+function renderPathCounts(){ const c = counts(); const cnt = document.getElementById('countText'); if(cnt) cnt.textContent = `${c.done} answer${c.done === 1 ? '' : 's'} so far`; }
+
+function chipGroup(q, v, single){ const wrap = el('div', {class:'chips', role:'group', 'aria-label': q.label}); const lim = el('div', {class:'limit', 'aria-live':'polite'}); v.sel = v.sel || []; const opts = q.opts.concat([UNSURE]); opts.forEach(o => { const isU = o === UNSURE; const b = el('button', {type:'button', class: 'chip' + (isU ? ' unsure' : ''), 'aria-pressed': v.sel.includes(o) ? 'true' : 'false'}, o); b.addEventListener('click', () => { let sel = v.sel.slice(); const on = sel.includes(o); if(single){ sel = on ? [] : [o]; } else if(isU){ sel = on ? [] : [UNSURE]; } else { sel = sel.filter(x => x !== UNSURE); if(on){ sel = sel.filter(x => x !== o); } else { if(q.max && sel.length >= q.max){ lim.textContent = `Up to ${q.max === 3 ? 'three' : q.max}, so the ones that matter most.`; return; } sel.push(o); } } lim.textContent = ''; v.sel = sel; wrap.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', v.sel.includes(c.textContent) ? 'true' : 'false')); b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop'); save(); renderPathCounts(); ideas.refresh(); }); wrap.append(b); }); const ideas = ideaBox(q); const box = el('div'); box.append(wrap, lim, noteBox(q, v), ideas); return box; }
+
+function tileGroup(q, v, items, kind){ const grid = el('div', {class:'tiles', role:'group', 'aria-label': q.label}); const lim = el('div', {class:'limit', 'aria-live':'polite'}); v.sel = v.sel || []; items.forEach(([name, data]) => { const b = el('button', {type:'button', class:'tile', 'aria-pressed': v.sel.includes(name) ? 'true' : 'false'}); if(kind === 'styles'){ const strip = el('div', {class:'strip', 'aria-hidden':'true'}); data.forEach(col => strip.append(el('b', {style:`background:${col}`}))); b.append(strip, el('span', {class:'name'}, name)); } else { b.append(el('span', {class:'sample', style:`font-family:${data}`}, "Hello, so glad you're here"), el('span', {class:'name'}, name)); } b.addEventListener('click', () => { let sel = v.sel.slice(); if(sel.includes(name)){ sel = sel.filter(x => x !== name); } else { if(q.max && sel.length >= q.max){ lim.textContent = 'Up to three, so the ones that matter most.'; return; } sel.push(name); } lim.textContent = ''; v.sel = sel; b.setAttribute('aria-pressed', sel.includes(name) ? 'true' : 'false'); save(); renderPathCounts(); ideas.refresh(); }); grid.append(b); }); const ideas = ideaBox(q); const box = el('div'); box.append(grid, lim, ideas); return box; }
+
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let activeRec = null;
+function speakButton(f, setVal){ const row = el('div', {class:'speakrow'}); const msg = el('span', {class:'speakmsg', 'aria-live':'polite'}); if(!SR){ return row; } const b = el('button', {type:'button', class:'speak', 'aria-pressed':'false'}, el('span', {class:'dot', 'aria-hidden':'true'}), el('span', {class:'lbl'}, 'Speak it')); let rec = null, base = ''; const stop = () => { if(rec){ try{ rec.stop(); }catch(e){} } }; const setOn = (on) => { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.querySelector('.lbl').textContent = on ? 'Listening, tap to stop' : 'Speak it'; }; b.addEventListener('click', () => { if(rec){ stop(); return; } if(activeRec){ try{ activeRec.stop(); }catch(e){} } try{ rec = new SR(); }catch(e){ msg.textContent = "Talking isn't available in this browser. The mic on your phone's keyboard works too."; return; } activeRec = rec; rec.lang = 'en-US'; rec.continuous = true; rec.interimResults = true; base = f.value ? f.value.replace(/\s*$/, ' ') : ''; rec.onresult = (e) => { let fin = '', mid = ''; for(let i = 0; i < e.results.length; i++){ const t = e.results[i][0].transcript; if(e.results[i].isFinal) fin += t; else mid += t; } f.value = (base + fin + mid).replace(/^\s+/, ''); setVal(f.value); save(); renderPathCounts(); }; rec.onerror = (e) => { msg.textContent = (e.error === 'not-allowed' || e.error === 'service-not-allowed' || e.error === 'audio-capture') ? "The mic isn't available here. The mic on your phone's keyboard works too." : (e.error === 'no-speech' ? "I didn't catch that. Tap Speak it and try again." : ''); }; rec.onend = () => { rec = null; if(activeRec) activeRec = null; setOn(false); }; try{ rec.start(); setOn(true); msg.textContent = ''; }catch(e){ rec = null; msg.textContent = "The mic isn't available here. The mic on your phone's keyboard works too."; } }); row.append(b, msg); return row; }
+function listBox(q, v){ v.items = v.items && v.items.length ? v.items : ['', '']; const box = el('div'); const rows = el('div', {class:'ideaslist'}); const draw = () => { rows.innerHTML = ''; v.items.forEach((val, i) => { const f = el('input', {type:'text', id:`${q.id}_${i}`, placeholder: (q.ph || [])[Math.min(i, (q.ph || ['']).length - 1)] || '', 'aria-label': `Post idea ${i+1}`}); f.value = val || ''; f.addEventListener('input', () => { v.items[i] = f.value; save(); renderPathCounts(); }); rows.append(el('div', {class:'item'}, el('span', {class:'num', 'aria-hidden':'true'}, String(i + 1)), el('div', {class:'grow'}, f, speakButton(f, x => { v.items[i] = x; })))); }); }; draw(); const add = el('button', {type:'button', class:'ghost'}, '+ Add another idea'); add.addEventListener('click', () => { if(v.items.length < 8){ v.items.push(''); save(); draw(); const f = rows.querySelector(`#${q.id}_${v.items.length-1}`); if(f) f.focus(); } }); box.append(rows, add); return box; }
+function textBox(q, v, long){ const attrs = {id: q.id, placeholder: q.ph || (long ? 'A few words or a lot, your call' : '')}; const f = long ? el('textarea', attrs) : el('input', Object.assign({type: q.kind === 'email' ? 'email' : 'text', autocomplete: q.kind === 'email' ? 'email' : 'off'}, attrs)); f.value = v.text || ''; f.addEventListener('input', () => { v.text = f.value; save(); renderPathCounts(); }); const wrap = el('div'); wrap.append(f, speakButton(f, val => { v.text = val; })); return wrap; }
+
+function normHex(t){ t = (t || '').trim().replace(/^#/, ''); if(/^[0-9a-f]{3}$/i.test(t)) t = t.split('').map(c => c + c).join(''); return /^[0-9a-f]{6}$/i.test(t) ? '#' + t.toLowerCase() : null; }
+function hexOf(r, g, b){ return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join(''); }
+function paletteFrom(img){ const w = 96, h = Math.max(1, Math.round(96 * img.height / img.width)); const cv = document.createElement('canvas'); cv.width = w; cv.height = h; const cx = cv.getContext('2d'); cx.drawImage(img, 0, 0, w, h); const d = cx.getImageData(0, 0, w, h).data; const buckets = new Map(); for(let i = 0; i < d.length; i += 4){ if(d[i+3] < 128) continue; const key = ((d[i] >> 4) << 8) | ((d[i+1] >> 4) << 4) | (d[i+2] >> 4); const bk = buckets.get(key) || {n:0, r:0, g:0, b:0}; bk.n++; bk.r += d[i]; bk.g += d[i+1]; bk.b += d[i+2]; buckets.set(key, bk); } const list = Array.from(buckets.values()).sort((a, b) => b.n - a.n).map(bk => [Math.round(bk.r / bk.n), Math.round(bk.g / bk.n), Math.round(bk.b / bk.n)]); const out = []; for(const c of list){ if(out.every(o => Math.hypot(o[0] - c[0], o[1] - c[1], o[2] - c[2]) > 48)) out.push(c); if(out.length >= 8) break; } return out.map(c => hexOf(c[0], c[1], c[2])); }
+function colorsBox(q, v){ v.list = v.list || []; const outer = el('div'); const box = el('div', {class:'swatches'}); const msg = el('div', {class:'limit', 'aria-live':'polite'}); const MAXC = 12; const addColor = (hex) => { if(v.list.includes(hex)){ msg.textContent = 'Already in your colors.'; return; } if(v.list.length >= MAXC){ msg.textContent = 'That is a full palette. Remove one to add another.'; return; } v.list.push(hex); msg.textContent = ''; save(); draw(); renderPathCounts(); }; const draw = () => { box.innerHTML = ''; v.list.forEach((hex, i) => { const inp = el('input', {type:'color', value: hex, id:`${q.id}_${i}`, 'aria-label': `Color ${i+1}`}); const code = el('code', null, hex.toUpperCase()); inp.addEventListener('input', () => { v.list[i] = inp.value; code.textContent = inp.value.toUpperCase(); save(); }); const rm = el('button', {type:'button', 'aria-label': `Remove color ${i+1}`}, 'Remove'); rm.addEventListener('click', () => { v.list.splice(i, 1); save(); draw(); renderPathCounts(); }); box.append(el('div', {class:'sw'}, inp, code, rm)); }); if(v.list.length < MAXC){ const add = el('button', {type:'button', class:'addbtn', 'aria-label':'Add a color'}, '+'); add.addEventListener('click', () => { const seeds = ['#E0607E','#F2B33D','#2E8C96','#7BB662','#9B7BD0','#4F86C6','#E08A57','#3E73A8']; let pick = seeds.find(x => !v.list.includes(x)) || '#888888'; addColor(pick); const last = box.querySelector(`#${q.id}_${v.list.length-1}`); if(last) last.focus(); }); box.append(el('div', {class:'sw'}, add, el('code', null, 'Add a color'))); } }; draw();
+ const hexIn = el('input', {type:'text', id:`${q.id}_hex`, placeholder:'#1D6A72', autocomplete:'off', spellcheck:'false', 'aria-label':'Hex code'}); const hexBtn = el('button', {type:'button', class:'small-btn'}, 'Add'); const takeHex = () => { const parts = hexIn.value.split(/[\s,;]+/).filter(Boolean); if(!parts.length) return; const good = parts.map(normHex).filter(Boolean); if(!good.length){ msg.textContent = "That doesn't look like a hex code. It's six letters and numbers, like #1D6A72."; return; } good.forEach(addColor); hexIn.value = ''; }; hexBtn.addEventListener('click', takeHex); hexIn.addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); takeHex(); } });
+ const file = el('input', {type:'file', id:`${q.id}_photo`, accept:'image/*', hidden:true}); const photoBtn = el('button', {type:'button', class:'small-btn'}, 'Pick colors from a photo'); const photoArea = el('div', {class:'photo-pick'}); photoBtn.addEventListener('click', () => file.click()); file.addEventListener('change', () => { const f = file.files && file.files[0]; file.value = ''; if(!f || !f.type.startsWith('image/')) return; const rd = new FileReader(); rd.onload = () => { const img = new Image(); img.onload = () => { photoArea.innerHTML = ''; const cv = el('canvas', {'aria-label':'Your photo. Tap anywhere to grab that color.', role:'img'}); const scale = Math.min(1, 720 / img.width); cv.width = Math.max(1, Math.round(img.width * scale)); cv.height = Math.max(1, Math.round(img.height * scale)); const cx = cv.getContext('2d'); cx.drawImage(img, 0, 0, cv.width, cv.height); cv.addEventListener('click', (e) => { const r = cv.getBoundingClientRect(); const x = Math.floor((e.clientX - r.left) / r.width * cv.width); const y = Math.floor((e.clientY - r.top) / r.height * cv.height); const px = cx.getImageData(Math.min(cv.width - 1, Math.max(0, x)), Math.min(cv.height - 1, Math.max(0, y)), 1, 1).data; addColor(hexOf(px[0], px[1], px[2])); }); const pal = el('div', {class:'pal'}); paletteFrom(img).forEach(hx => { const b = el('button', {type:'button', 'aria-label': `Add ${hx.toUpperCase()}`}, el('i', {style:`background:${hx}`}), hx.toUpperCase()); b.addEventListener('click', () => addColor(hx)); pal.append(b); }); photoArea.append(el('p', {class:'hint', style:'margin:10px 0 0'}, 'Colors from your photo. Tap one to add it, or tap anywhere on the photo to grab that exact color.'), pal, cv); }; img.src = rd.result; }; rd.readAsDataURL(f); });
+ v.words = v.words || ''; const words = el('input', {type:'text', id:`${q.id}_words`, placeholder:'Like the blue of my front door', 'aria-label':'Describe colors in words'}); words.value = v.words; words.addEventListener('input', () => { v.words = words.value; save(); renderPathCounts(); });
+ const ways = el('div', {class:'ways'}, el('div', null, el('div', {class:'lbl'}, 'Know the code? Type a hex code'), el('div', {class:'row'}, hexIn, hexBtn)), el('div', null, el('div', {class:'lbl'}, 'Snap or choose a photo you love'), el('div', {class:'row'}, photoBtn, file), photoArea), el('div', null, el('div', {class:'lbl'}, 'Or describe them in words'), words));
+ outer.append(box, msg, ways); return outer; }
+
+function linksBox(q, v){ v.list = v.list && v.list.length ? v.list : [{url:'', why:''}]; const box = el('div'); const rows = el('div'); const draw = () => { rows.innerHTML = ''; v.list.forEach((r, i) => { const u = el('input', {type:'url', id:`${q.id}_u${i}`, placeholder:'Link to the site', 'aria-label': `Site ${i+1} link`, inputmode:'url'}); u.value = r.url || ''; u.addEventListener('input', () => { r.url = u.value; save(); renderPathCounts(); }); const w = el('input', {type:'text', id:`${q.id}_w${i}`, placeholder:'What you love about it', 'aria-label': `What you love about site ${i+1}`}); w.value = r.why || ''; w.addEventListener('input', () => { r.why = w.value; save(); renderPathCounts(); }); const rm = el('button', {type:'button', class:'mini', 'aria-label': `Remove site ${i+1}`}, 'Remove'); rm.addEventListener('click', () => { v.list.splice(i, 1); if(!v.list.length) v.list.push({url:'', why:''}); save(); draw(); }); rows.append(el('div', {class:'linkrow'}, u, w, rm)); }); }; draw(); const add = el('button', {type:'button', class:'ghost'}, '+ Add another site'); add.addEventListener('click', () => { if(v.list.length < 8){ v.list.push({url:'', why:''}); save(); draw(); const f = rows.querySelector(`#${q.id}_u${v.list.length-1}`); if(f) f.focus(); } }); box.append(rows, add); return box; }
+
+function fmtMB(b){ return (b / (1024*1024)).toFixed(1) + ' MB'; }
+function shrink(file){ return new Promise(resolve => { const rd = new FileReader(); rd.onload = () => { const url = rd.result; if(!/^image\/(png|jpe?g|webp)$/.test(file.type)){ resolve({name:file.name, type:file.type, size:file.size, url}); return; } const img = new Image(); img.onload = () => { const max = 1600; const scale = Math.min(1, max / Math.max(img.width, img.height)); if(scale === 1 && file.size < 900*1024){ resolve({name:file.name, type:file.type, size:file.size, url}); return; } const cv = document.createElement('canvas'); cv.width = Math.round(img.width * scale); cv.height = Math.round(img.height * scale); const ctx = cv.getContext('2d'); ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, cv.width, cv.height); ctx.drawImage(img, 0, 0, cv.width, cv.height); const out = cv.toDataURL('image/jpeg', 0.82); const size = Math.round((out.length - out.indexOf(',') - 1) * 3 / 4); resolve({name:file.name.replace(/\.[^.]+$/, '') + '.jpg', type:'image/jpeg', size, url: out}); }; img.onerror = () => resolve({name:file.name, type:file.type, size:file.size, url}); img.src = url; }; rd.onerror = () => resolve(null); rd.readAsDataURL(file); }); }
+function uploadBox(q){ const box = el('div'); const input = el('input', {type:'file', id:`${q.id}_input`, accept:'image/*,.pdf', multiple:true, hidden:true}); const drop = el('div', {class:'drop', role:'button', tabindex:'0', 'aria-label':'Add images or files'}, el('strong', null, 'Drop images here, or tap to choose'), el('span', null, 'Images and PDFs. Big photos are resized for you.')); const thumbs = el('div', {class:'thumbs'}); const meter = el('div', {class:'meter', 'aria-live':'polite'}); const draw = () => { thumbs.innerHTML = ''; uploads.forEach((f, i) => { const t = el('div', {class:'thumb'}); if(f.url && f.type.startsWith('image/')) t.append(el('img', {src: f.url, alt: f.name})); else t.append(el('div', {class:'doc'}, f.name)); const rm = el('button', {type:'button', 'aria-label': `Remove ${f.name}`}, '×'); rm.addEventListener('click', () => { uploads.splice(i, 1); draw(); renderPathCounts(); }); t.append(rm); thumbs.append(t); }); const total = uploads.reduce((s, f) => s + f.size, 0); meter.textContent = uploads.length ? `${uploads.length} file${uploads.length === 1 ? '' : 's'} · ${fmtMB(total)} of 7.5 MB` + (total > SEND_LIMIT ? '. That is over the limit, so remove one or two.' : '') : ''; }; const take = async (files) => { for(const f of Array.from(files)){ if(uploads.length >= 12) break; if(!(f.type.startsWith('image/') || f.type === 'application/pdf')) continue; const r = await shrink(f); if(r) uploads.push(r); draw(); renderPathCounts(); } }; drop.addEventListener('click', () => input.click()); drop.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); input.click(); } }); drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('over'); }); drop.addEventListener('dragleave', () => drop.classList.remove('over')); drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('over'); take(e.dataTransfer.files); }); input.addEventListener('change', () => { take(input.files); input.value = ''; }); draw(); box.append(input, drop, thumbs, meter); return box; }
+
+function socialsBox(q, v){ v.sel = v.sel || []; v.d = v.d || {}; const box = el('div'); const chips = el('div', {class:'chips', role:'group', 'aria-label': q.label}); const details = el('div', {class:'soc'}); const all = PLATFORMS.concat(['None yet']); const draw = () => { chips.innerHTML = ''; all.forEach(p => { const b = el('button', {type:'button', class:'chip' + (p === 'None yet' ? ' unsure' : ''), 'aria-pressed': v.sel.includes(p) ? 'true' : 'false'}, p); b.addEventListener('click', () => { if(p === 'None yet'){ v.sel = v.sel.includes(p) ? [] : ['None yet']; } else { v.sel = v.sel.filter(x => x !== 'None yet'); v.sel = v.sel.includes(p) ? v.sel.filter(x => x !== p) : v.sel.concat([p]); } save(); draw(); renderPathCounts(); ideas.refresh(); }); chips.append(b); }); details.innerHTML = ''; v.sel.filter(p => p !== 'None yet').forEach(p => { const d = v.d[p] = v.d[p] || {}; const handle = el('input', {type:'text', id:`soc_${p.replace(/\W/g,'')}`, placeholder:'Your handle or link', 'aria-label': `${p} handle or link`}); handle.value = d.handle || ''; handle.addEventListener('input', () => { d.handle = handle.value; save(); }); const mini = (label, opts, key) => { const row = el('div', {class:'chips', role:'group', 'aria-label': `${p}: ${label}`}); opts.forEach(o => { const b = el('button', {type:'button', class:'chip', 'aria-pressed': d[key] === o ? 'true' : 'false'}, o); b.addEventListener('click', () => { d[key] = d[key] === o ? '' : o; row.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', d[key] === c.textContent ? 'true' : 'false')); save(); }); row.append(b); }); return [el('div', {class:'sub'}, label), row]; }; details.append(el('div', {class:'socd'}, el('h4', null, p), handle, ...mini('How often you post', ['Daily','Weekly','Now and then','Rarely'], 'often'), ...mini('How it feels', ['Love it',"It's fine",'Dread it'], 'feel'))); }); }; const ideas = ideaBox(q); draw(); box.append(chips, ideas, details); return box; }
+
+function scaleBox(q, v){ if(typeof v.val !== 'number') v.val = null; const wrap = el('div', {class:'scale'}); const out = el('output', {for: q.id}); const r = el('input', {type:'range', id: q.id, min:'1', max:'5', step:'1', 'aria-label': q.label}); r.value = v.val || 3; const show = () => { out.textContent = v.val ? q.steps[v.val - 1] : 'Slide to choose'; }; r.addEventListener('input', () => { v.val = Number(r.value); show(); save(); renderPathCounts(); }); show(); wrap.append(r, el('div', {class:'ends'}, el('span', null, q.ends[0]), el('span', null, q.ends[1])), out); return wrap; }
+
+function infoBlock(){ return el('div', {class:'q'}, el('div', {class:'qlabel'}, 'How I build your site'), el('p', {class:'hint'}, "I build every site with the same tools I use for my own businesses: Claude to help me write and build, GitHub to keep the site's files, and Netlify to put it online. That keeps it fast and the cost low. I don't build in Wix, Squarespace, or WordPress."), el('ol', {class:'steps3'}, el('li', null, "You buy your web address (domain) in your own name. I'll send simple steps."), el('li', null, 'I build it and launch it from my GitHub and Netlify. You see a private preview first.'), el('li', null, 'Then you choose how it is looked after.')), el('div', {class:'how'}, el('div', {class:'card'}, el('h4', null, 'Hand it over'), el('p', null, 'I move the site into your own GitHub and Netlify accounts, with written instructions for making changes. You pay for the build once.')), el('div', {class:'card'}, el('h4', null, 'I keep it running'), el('p', null, 'It stays with me, and I make a set number of updates for you each month for a low monthly fee.')))); }
+
+function renderQ(q){ const v = A(q.id); const box = el('div', {class:'q'}); const labelFor = (q.t === 'text' || q.t === 'long' || q.t === 'scale') ? q.id : null; box.append(labelFor ? el('label', {for: labelFor}, q.label) : el('div', {class:'qlabel', id:`${q.id}_l`}, q.label)); if(q.hint) box.append(el('p', {class:'hint'}, q.hint)); if(q.t === 'multi') box.append(chipGroup(q, v, false)); else if(q.t === 'single') box.append(chipGroup(q, v, true)); else if(q.t === 'text') box.append(textBox(q, v, false)); else if(q.t === 'long') box.append(textBox(q, v, true)); else if(q.t === 'styles') box.append(tileGroup(q, v, STYLES, 'styles')); else if(q.t === 'fonts') box.append(tileGroup(q, v, FONTS, 'fonts')); else if(q.t === 'colors') box.append(colorsBox(q, v)); else if(q.t === 'links') box.append(linksBox(q, v)); else if(q.t === 'list') box.append(listBox(q, v)); else if(q.t === 'upload') box.append(uploadBox(q)); else if(q.t === 'socials') box.append(socialsBox(q, v)); else if(q.t === 'scale') box.append(scaleBox(q, v)); return box; }
+
+/* screens */
+function renderWelcome(main){ const sec = el('section', {class:'welcome'}); setColor(sec, 'rose'); const paint = el('div', {class:'paint', 'aria-hidden':'true'}); ['rose','sun','river','onion','chive','sky','berry','peach'].forEach(n => paint.append(el('b', {style:`background:var(--${n})`}))); const name = el('input', {type:'text', id:'name', autocomplete:'given-name', placeholder:'Your first name'}); name.value = state.name || ''; name.addEventListener('input', () => { state.name = name.value; save(); }); const start = el('button', {type:'button', class:'btn'}, Object.keys(state.a).length ? 'Pick up where you left off' : "Let's start"); start.addEventListener('click', () => go(firstOpen())); const items = [['rose','About 15 minutes of quick taps. Type only when you feel like it, and go deeper anywhere you like.'],['berry',"As you answer, I'll share ideas and tips made for you, and you'll see a sneak peek of your site take shape."],['sun',"Don't know an answer yet? That's completely okay. Leave it, and we'll talk it through together, or skip it if it doesn't fit you right now."],['onion',"Rather talk than type? Tap Speak it on any writing box (your browser turns your words into text), or use the mic on your phone's keyboard."],['river','Your answers save in this browser, so you can come back anytime.'],['chive','Please leave out customer details and passwords.']]; const ul = el('ul', {class:'promises'}); items.forEach(([c, t]) => ul.append(el('li', null, el('i', {style:`background:var(--${c})`, 'aria-hidden':'true'}), el('span', null, t)))); sec.append(el('div', {class:'room'}, paint, el('span', {class:'chip-label'}, el('i'), 'From Gina at StrideForward'), el('h1', null, 'Your website, your way'), el('p', {class:'lede'}, 'Think of this as a long coffee with a friend who happens to build websites. There are no wrong answers, and nothing here is final. Your site can grow and change as you do.'), ul, el('div', {class:'q'}, el('label', {for:'name'}, 'First, what should I call you?'), name), el('div', {class:'nav'}, el('span'), start))); main.append(sec); }
+function firstOpen(){ for(let i = 0; i < SECTIONS.length; i++){ if(!SECTIONS[i].qs.some(answered)) return i; } return 0; }
+
+function renderSection(main, i){ const s = SECTIONS[i]; const sec = el('section'); setColor(sec, s.color); if(arrivedFrom === i - 1 && s.cheer) sec.append(el('p', {class:'cheer'}, fill(s.cheer))); const quick = s.qs.filter(q => !q.deep), deep = s.qs.filter(q => q.deep); const secs = quick.reduce((t, q) => t + (q.t === 'long' ? 60 : q.t === 'text' ? 25 : ['upload','links','colors','socials'].includes(q.t) ? 45 : 15), 0); const mins = Math.max(1, Math.round(secs / 60)); const room = el('div', {class:'room'}); room.append(el('span', {class:'chip-label'}, el('i'), `Room ${i+1}`, el('span', {class:'mins'}, `· about ${mins} minute${mins > 1 ? 's' : ''}`)), el('h2', null, s.title), el('p', {class:'intro'}, s.intro)); if(s.info) room.append(infoBlock()); if(s.id === 'look') room.append(peekSlot('Sneak peek: your site is taking shape')); quick.forEach(q => room.append(renderQ(q))); if(deep.length){ const d = el('details', {class:'deep'}); if(deep.some(answered)) d.open = true; d.append(el('summary', null, `Go deeper, if you feel like it (${deep.length} more)`)); deep.forEach(q => d.append(renderQ(q))); room.append(d); } const back = el('button', {type:'button', class:'btn back'}, 'Back'); back.addEventListener('click', () => go(i === 0 ? 'welcome' : i - 1)); const last = i === SECTIONS.length - 1; const next = el('button', {type:'button', class:'btn'}, last ? 'See everything you shared' : `Next: ${SECTIONS[i+1].title}`); next.addEventListener('click', () => go(last ? 'review' : i + 1)); const skip = el('button', {type:'button', class:'skip'}, 'Skip this room for now'); skip.addEventListener('click', () => go(last ? 'review' : i + 1)); room.append(el('div', {class:'nav'}, back, skip, next)); sec.append(room); main.append(sec); }
+
+function summary(q){ const v = state.a[q.id] || {}; const parts = []; if(q.t === 'text' || q.t === 'long'){ if(v.text && v.text.trim()) parts.push(v.text.trim()); } else if(q.t === 'colors'){ if(v.list && v.list.length) parts.push(v.list.map(h => h.toUpperCase()).join(', ')); if(v.words && v.words.trim()) parts.push(v.words.trim()); } else if(q.t === 'links'){ (v.list || []).forEach(r => { if((r.url||'').trim() || (r.why||'').trim()) parts.push([r.url, r.why].filter(Boolean).join(' · ')); }); } else if(q.t === 'list'){ (v.items || []).forEach(x => { if((x||'').trim()) parts.push(x.trim()); }); } else if(q.t === 'upload'){ if(uploads.length) parts.push(uploads.map(f => f.name).join(', ')); } else if(q.t === 'scale'){ if(v.val) parts.push(q.steps[v.val - 1]); } else if(q.t === 'socials'){ (v.sel || []).forEach(p => { const d = (v.d || {})[p] || {}; parts.push([p, d.handle, d.often, d.feel].filter(Boolean).join(' · ')); }); } else { if(v.sel && v.sel.length) parts.push(v.sel.join(', ')); if(v.note && v.note.trim()) parts.push(v.note.trim()); } return parts; }
+function plainText(){ const lines = [`Website questionnaire${nm() ? ' from ' + nm() : ''}`, '']; SECTIONS.forEach(s => { const got = s.qs.map(q => [q, summary(q)]).filter(([, p]) => p.length); if(!got.length) return; lines.push(s.title.toUpperCase()); got.forEach(([q, p]) => { lines.push(q.label); p.forEach(x => lines.push('  ' + x)); }); lines.push(''); }); const ideas = allIdeas(); if(ideas.length){ lines.push('IDEAS THAT CAME UP'); ideas.forEach(x => { const r = (state.r || {})[x.key]; lines.push(`  ${x.k}: ${x.t}` + (r ? ` (${({love:'Love it', like:'Like it', nah:'Nah'})[r]})` : '')); }); lines.push(''); } return lines.join('\n'); }
+
+function dataUrlToBlob(u, type){ const i = u.indexOf(','); const bin = atob(u.slice(i + 1)); const arr = new Uint8Array(bin.length); for(let j = 0; j < bin.length; j++) arr[j] = bin.charCodeAt(j); return new Blob([arr], {type: type || 'application/octet-stream'}); }
+function sectionText(s){ const lines = []; s.qs.forEach(q => { const p = summary(q); if(p.length){ lines.push(q.label); p.forEach(x => lines.push('  ' + x)); } }); return lines.join('\n') || 'Skipped for now'; }
+function ideasText(){ const r = state.r || {}; return allIdeas().map(x => `${x.k}: ${x.t}` + (r[x.key] ? ` (${({love:'Love it', like:'Like it', nah:'Nah'})[r[x.key]]})` : '')).join('\n') || 'None yet'; }
+function peekText(){ const colors = ((state.a.lk_colors || {}).list || []).map(h => h.toUpperCase()).join(', '); return [`Title: ${((state.a.work_name || {}).text || '').trim() || nm()}`, `Colors: ${colors || 'none picked'}`, `Color words: ${((state.a.lk_colors || {}).words || '').trim() || 'none'}`, `Styles: ${picks('lk_style').join(', ') || 'none picked'}`, `Lettering: ${picks('lk_fonts').join(', ') || 'none picked'}`].join('\n'); }
+async function submitAll(email){ const fd = new FormData(); fd.append('form-name', 'website-questionnaire'); fd.append('bot-field', ''); fd.append('name', nm()); fd.append('email', email); fd.append('answers', plainText()); fd.append('ideas', ideasText()); fd.append('sneak_peek', peekText()); SECTIONS.forEach((s, i) => fd.append(`room_${String(i + 1).padStart(2, '0')}_${s.id}`, sectionText(s))); uploads.slice(0, 12).forEach((f, i) => { if(f.url) fd.append(`file_${i + 1}`, dataUrlToBlob(f.url, f.type), f.name); }); const res = await fetch('/', {method:'POST', body: fd}); if(!res.ok) throw new Error('send failed ' + res.status); }
+function renderReview(main){ const sec = el('section', {class:'rev'}); setColor(sec, 'river'); const c = counts(); const room = el('div', {class:'room'}); room.append(el('span', {class:'chip-label'}, el('i'), 'Last look'), el('h2', null, 'Here is everything you shared'), el('p', {class:'left'}, c.total - c.done ? 'Anything you skipped, we can talk through over coffee. Perfect.' : 'You answered every single question. Wow.')); room.append(peekSlot('Your sneak peek')); const ideas = allIdeas(); if(ideas.length){ room.append(el('h3', null, el('i', {style:'background:var(--gold)', 'aria-hidden':'true'}), `Ideas already brewing for you (${ideas.length})`)); const board = el('div', {class:'board'}); const rank = x => ({love:0, like:1, '':2, nah:3})[(state.r || {})[x.key] || '']; ideas.slice().sort((a, b) => rank(a) - rank(b)).forEach(x => { const card = ideaCard(x, false); setColor(card, x.color); board.append(card); }); room.append(el('p', {class:'hint'}, 'Your favorites float to the top. Tap Love it, Like it, or Nah on any of them.'), board); } SECTIONS.forEach((s, i) => { const got = s.qs.map(q => [q, summary(q)]).filter(([, p]) => p.length); const h = el('h3', null, el('i', {style:`background:var(--${s.color})`, 'aria-hidden':'true'}), s.title); const edit = el('button', {type:'button', class:'mini edit'}, 'Edit'); edit.addEventListener('click', () => go(i)); h.append(edit); room.append(h); if(!got.length){ room.append(el('p', {class:'hint'}, "Skipped for now. We'll talk about it.")); return; } const dl = el('dl'); got.forEach(([q, p]) => { dl.append(el('dt', null, q.label), el('dd', null, p.join(' · '))); }); room.append(dl); }); if(uploads.length){ const t = el('div', {class:'thumbs'}); uploads.forEach(f => { const d = el('div', {class:'thumb'}); if(f.url && f.type.startsWith('image/')) d.append(el('img', {src:f.url, alt:f.name})); else d.append(el('div', {class:'doc'}, f.name)); t.append(d); }); room.append(t); } const copyNote = el('span', {class:'copied', 'aria-live':'polite'}); const copy = el('button', {type:'button', class:'btn back'}, 'Copy my answers'); copy.addEventListener('click', () => { const text = plainText(); const done = () => { copyNote.textContent = 'Copied.'; }; try{ navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, copyNote)); }catch(e){ fallbackCopy(text, copyNote); } }); const nameIn = el('input', {type:'text', id:'contact_name', autocomplete:'name'}); nameIn.value = state.name || ''; nameIn.addEventListener('input', () => { state.name = nameIn.value; save(); }); const emailIn = el('input', {type:'email', id:'contact_email', autocomplete:'email', placeholder:'you@example.com'}); emailIn.value = state.email || ''; emailIn.addEventListener('input', () => { state.email = emailIn.value; save(); }); const contact = el('div', {class:'q'}, el('label', {for:'contact_name'}, 'Your name'), nameIn, el('label', {for:'contact_email', style:'display:block;margin-top:14px'}, 'Where should I send my reply?'), emailIn, el('p', {class:'hint', style:'margin-top:10px'}, 'Your answers and files go to Gina at StrideForward and nowhere else. ', el('a', {href:'/privacy'}, 'Privacy details'))); const status = el('p', {class:'sendmsg', role:'status', 'aria-live':'polite'}); const send = el('button', {type:'button', class:'btn'}, state.sent ? 'Sent' : 'Send it to Gina'); if(state.sent) send.disabled = true; send.addEventListener('click', async () => { if(!IS_LIVE){ go('thanks'); return; } const email = (state.email || '').trim(); if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ status.textContent = 'Add your email so I can reply.'; emailIn.focus(); return; } const total = uploads.reduce((t, f) => t + f.size, 0); if(total > SEND_LIMIT){ status.textContent = 'Your files are a little too big to send together. Remove one or two in Room 7, then try again.'; return; } send.disabled = true; send.textContent = 'Sending...'; status.textContent = ''; try{ await submitAll(email); state.sent = true; try{ localStorage.removeItem(KEY); }catch(e){} if(window.gtag) window.gtag('event', 'sf_form_submit', {form_name:'website-questionnaire'}); go('thanks'); }catch(e){ send.disabled = false; send.textContent = 'Send it to Gina'; status.textContent = "That didn't go through. Your answers are still saved here, so try again in a minute, or tap Copy my answers and email them to hello@strideforward.world."; } }); room.append(contact, el('div', {class:'nav'}, el('span', null, copy, copyNote), send), status); sec.append(room); main.append(sec); }
+function fallbackCopy(text, note){ const ta = el('textarea', {'aria-label':'Your answers'}); ta.value = text; ta.style.minHeight = '160px'; note.replaceWith(ta); ta.focus(); ta.select(); }
+
+function renderThanks(main){ const sec = el('section', {class:'thanks'}); setColor(sec, 'sun'); const room = el('div', {class:'room'}); const paint = el('div', {class:'paint', 'aria-hidden':'true'}); ['rose','sun','river','onion','chive','sky','berry','peach'].forEach(n => paint.append(el('b', {style:`background:var(--${n})`}))); room.append(paint, el('span', {class:'chip-label'}, el('i'), 'Sent'), el('h1', null, nm() ? `Thank you, ${nm()}` : 'Thank you'), el('p', {class:'lede'}, allIdeas().length ? `I'll read every word before we meet, and I'll bring your favorite ideas to our coffee. I can't wait to see what we build together.` : "I'll read every word before we meet. I can't wait to see what we build together."), el('ol', {class:'next'}, el('li', null, 'We meet, talk through your answers, and look at the sites you love.'), el('li', null, 'Within two business days, you get a one-page scope note: the pages, who does what, and the timeline.'), el('li', null, 'Nothing gets built until you say yes.')), IS_LIVE ? null : el('p', {class:'hint'}, 'Preview only: nothing was sent. On the live page, this button sends your answers and files to Gina.'), el('p', {class:'cheer', style:'--cink:var(--teal)'}, 'Gina')); const again = el('button', {type:'button', class:'btn back'}, 'Back to my answers'); again.addEventListener('click', () => go('review')); room.append(el('div', {class:'nav'}, again, el('span'))); sec.append(room); main.append(sec); }
+
+function render(){ const main = document.getElementById('main'); main.innerHTML = ''; renderPath(); if(state.step === 'welcome') renderWelcome(main); else if(state.step === 'review') renderReview(main); else if(state.step === 'thanks') renderThanks(main); else if(typeof state.step === 'number' && SECTIONS[state.step]) renderSection(main, state.step); else { state.step = 'welcome'; renderWelcome(main); } afterChange(); }
+
+function start(data){ const pn = document.getElementById('previewNote'); if(pn) pn.hidden = IS_LIVE; load(); if(data && data.state){ state = data.state; } if(data && data.uploads){ uploads = data.uploads; } render(); }
+window.claude?.hot?.snapshot?.(() => ({state, uploads}));
+window.claude?.hot?.ready ? window.claude.hot.ready(start) : start(window.claude?.hot?.data ?? {});
+})();
+</script>
+
+</body></html>
