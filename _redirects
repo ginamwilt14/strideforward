@@ -12,6 +12,8 @@ http://gmwgroupllc.com/* https://www.strideforward.world/:splat 301!
 /about /about.html 200
 /professional-learning /professional-learning.html 200
 /contact /contact.html 200
+# Unlisted client questionnaire (noindex, not in the sitemap).
+/your-website /your-website.html 200
 /blog/experience-with-too-much-friction /blog/experience-with-too-much-friction.html 200
 /blog/k12/coaching-conversation-starts-before /blog/k12/coaching-conversation-starts-before.html 200
 /blog/k12/coaching-culture-not-more-coaches /blog/k12/coaching-culture-not-more-coaches.html 200
