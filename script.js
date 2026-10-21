@@ -49,6 +49,7 @@ const ML_FORMS = {
   'pilot-plan-download': '201454295709648266',      // Pilot Plan: 3 emails
   'situation-map-download': '201454296833721896',   // Situation Map: 3 emails
   'learner-card-download': '201454297837209358',    // Build for the LEARNER card: 3 emails
+  'voice-card-download': '201968821429339271',      // Voice card AI skill: group "StrideForward — Voice card" (no emails yet)
   'contact': '201049857072301553',                  // Write first: receipt email
   'field-notes-signup': '201530866575344865'         // Field notes (/blog and the end of each field note): group "StrideForward — Field notes"
 };

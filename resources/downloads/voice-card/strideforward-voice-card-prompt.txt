@@ -1,0 +1,68 @@
+YOUR VOICE CARD: COPY-AND-PASTE VERSION
+A free tool from StrideForward (strideforward.world)
+
+Use this version with any AI assistant: ChatGPT, Gemini, Copilot, or Claude without skills.
+1. Open a new chat.
+2. Copy everything between the two lines below and paste it in as your first message.
+3. Answer the questions. Skip anything you like. It takes about ten minutes.
+4. Save the voice card it writes for you, and paste the card at the start of any chat when you want writing that sounds like you.
+
+----- COPY FROM HERE -----
+
+Please help me make a voice card: one page that tells any AI assistant how I sound, so the drafts it writes for me sound like me.
+
+How to run this:
+- Be warm, plain, and quick, like a friend who is good with words.
+- Ask me the questions below a few at a time, one round per message, numbered. Keep your messages short.
+- After each round, reflect back one or two things you noticed in one sentence, then ask the next round.
+- If my answer is thin, offer two or three example answers I can pick from or edit.
+- Never invent facts about me or my business.
+- I will leave out customers' and family members' names and personal details. If I paste something that includes them anyway, leave those details out of the card and tell me you did.
+
+Round 1: me and my people
+1. What do you do, in a sentence or two, the way you would say it to a friend?
+2. Who are you writing for? Describe the people you most want to reach.
+3. When someone finishes reading something you wrote, how do you want them to feel?
+
+Round 2: how I sound
+4. Pick three words for how you want to sound, and one word for how you never want to sound.
+5. What words or phrases do you use a lot? These can be your own or your field's.
+6. What words, phrases, or styles do you avoid, or make you cringe when you see them?
+
+Round 3: my own writing
+7. Paste a short piece of your own writing that you like: an email, a post, or part of a web page, about 100 to 300 words. Remove any customer or family names first.
+8. Share a sentence or two you love, by you or anyone, that sounds like the voice you want.
+
+Round 4: my rules
+9. What does your writing never do? For example: no exclamation points, no slang, no hard selling, no jargon.
+10. Are there topics to keep out of your writing?
+11. Any formatting habits? Short paragraphs, lists or no lists, emoji or none, how you sign off.
+12. Where will you use AI drafts most: emails, social posts, your website, newsletters, replies to inquiries, or something else?
+
+When all four rounds are done, write my voice card as one page of plain text I can copy anywhere. Use only what I told you and what my writing sample shows, and leave out any line you would have to guess. Use this layout:
+
+VOICE CARD: [my name or business name]
+Who I am: [one or two sentences, in my words]
+Who I'm writing for: [my people, in my words]
+How I want readers to feel: [my answer]
+How I sound: [three words], never [one word]
+- [three to five short notes on tone, drawn from my answers and my sample]
+Words I use: [list]
+Words I avoid: [list]
+Sentences that sound like me:
+1. [a new sentence in my voice, about my work]
+2. [a new sentence in my voice, for my people]
+3. [a new sentence in my voice, as an opening line]
+My writing never:
+- [my rules, one per line]
+Keep out: [topics] and any customer or family personal details.
+Formatting: [my habits]
+How to use this card: Paste it at the start of a chat, or into your assistant's custom instructions or project instructions. Then ask for a draft, for example "Using my voice card, write a reply to this inquiry." Read every draft before it goes out, and tell the assistant what to change.
+
+Write the three example sentences fresh, about my real work as I described it. Do not copy my sample word for word, and do not add claims, numbers, results, or credentials I did not give you.
+
+Then ask me: "Does this sound like you? Tell me anything to change, add, or remove." Refine it until I'm happy, and offer to write one short first draft with it.
+
+----- COPY TO HERE -----
+
+Questions, or want help putting AI to work in your business? Thirty minutes with Gina, no preparation: https://www.strideforward.world/contact
