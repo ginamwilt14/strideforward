@@ -321,3 +321,19 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .sf-signup-form .button{justify-self:start}
 .sf-signup-form .small-note{margin-top:0}
 @media(max-width:800px){.sf-signup-inner{grid-template-columns:1fr;gap:24px;padding:24px}}
+
+/* Oct 21, 2026: package tiles (home, What we do, Packages), package names as headings, brand logos on About */
+.sf-pkgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--space-5);margin-top:var(--space-8)}
+.sf-pkg{display:flex;flex-direction:column;gap:var(--space-3);border:1px solid var(--line);border-top:4px solid var(--teal);background:var(--surface);padding:var(--space-6);color:var(--ink);text-decoration:none}
+.sf-pkg:hover{border-color:var(--teal)}
+.sf-pkg:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.sf-pkg h3{font-size:1.4rem;line-height:1.2;margin:0}
+.sf-pkg p{margin:0;font-size:var(--text-sm);color:var(--muted)}
+.sf-pkg p strong{display:block;color:var(--ink);font-weight:600;font-size:var(--text-xs);letter-spacing:.06em;margin-bottom:2px}
+.sf-pkg .pkg-more{margin-top:auto;padding-top:var(--space-2);font-weight:600;font-size:var(--text-sm);color:var(--teal)}
+.sf-pkg.is-ongoing{border-top-color:var(--gold)}
+.sf-pkg-actions{display:flex;flex-wrap:wrap;gap:var(--space-5);align-items:center;margin-top:var(--space-8)}
+.service .pkg-name{font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.15;margin-bottom:var(--space-2)}
+.service .pkg-tagline{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--teal);margin-bottom:var(--space-4)}
+.family-grid .brand-plate{display:flex;align-items:center;height:88px;padding:16px 18px;background:#F5F0E8;margin-bottom:var(--space-5)}
+.family-grid .brand-plate img{display:block;width:auto;height:auto;max-height:56px;max-width:100%}
