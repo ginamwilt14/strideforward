@@ -2,13 +2,15 @@
 
 > StrideForward is a consulting and program design practice in Phoenix, Arizona, and a GMW Group company. Gina Wilt, EdD, MBA, helps small businesses, nonprofits, and education ventures find the real problem, design a workable solution, and put it into practice, as a defined project or as fractional (embedded) support.
 
-Six services: market research and positioning, customer experience design, program development, new revenue services and products, business development and sales, and human-centered AI workflows and automation. Work starts with a free 30-minute discovery call; if it is a fit, a one-page scope note with the fee follows within two business days. Gina works with clients in person and remotely.
+Six services: market research and positioning, customer experience design, program development, new revenue services and products, business development and sales, and human-centered AI workflows and automation. Build-for-you packages put the same help into set packages for owners who want the work done for them. Work starts with a free 30-minute discovery call; if it is a fit, a one-page scope note with the fee follows within two business days. Gina works with clients in person and remotely.
 
 ## Main pages
 
 - [Home](https://www.strideforward.world/): What StrideForward does, who it serves, and how a first call goes.
 - [What we do](https://www.strideforward.world/services): The six services, the two ways to work (project or fractional), and what each service delivers.
 - [AI workflows](https://www.strideforward.world/ai-workflows): How StrideForward sets up AI workflows for small teams, with people making the calls.
+- [Build-for-you packages](https://www.strideforward.world/packages): Done-for-you packages for small businesses, nonprofits, small teams, founders, and side hustlers: a one-job AI setup, an AI workflow starter, a website build, social media and email setup, an AI team build, an owner's command center, and monthly build and manage support. Costed in the scope note.
+- [Website build](https://www.strideforward.world/websites): Small, fast websites in the owner's voice, with forms that feed follow-up and search set up at launch, then a handover or monthly site care.
 - [Education ventures](https://www.strideforward.world/education-ventures): Help for education startups and learning ventures with evidence, pilots, school buyers, and partnerships.
 - [About](https://www.strideforward.world/about): Who Gina Wilt is, her background, and how she works with clients.
 - [Example scope note](https://www.strideforward.world/scope-note-example): What the one-page scope note after a discovery call looks like.
@@ -30,11 +32,13 @@ Six services: market research and positioning, customer experience design, progr
 - [Situational Agency for Small Teams](https://www.strideforward.world/blog/situational-agency-duckworth-situated): What Angela Duckworth's Situated means for setting up work.
 - [Building a Learning Product? Seven Lessons From EdTech Week](https://www.strideforward.world/blog/lessons-for-building-learning-products): Advice for teams building learning products.
 - [How Local Businesses and Community Groups Support Learning](https://www.strideforward.world/blog/learning-is-a-community-project): Practical ways a small business or community group can support learning.
+- [Scrappy on Purpose: Breaking the Nonprofit Starvation Cycle](https://www.strideforward.world/blog/scrappy-on-purpose): How small nonprofits and education teams change big systems when funding is uncertain, with a checklist for the next grant cycle.
 - [K–12 field notes](https://www.strideforward.world/blog/k12/): Notes on teacher voice, coaching, and professional learning.
 
 ## Free tools
 
 - [Resources](https://www.strideforward.world/resources/): All free tools in one place.
+- [Your voice card](https://www.strideforward.world/resources/voice-card): A free AI skill that interviews you and writes a one-page voice guide any AI assistant can follow, as a Claude skill or a copy-and-paste prompt.
 - [Problem Clarity Worksheet](https://www.strideforward.world/resources/problem-clarity-worksheet): A one-page worksheet to name the real problem and pick a two-week test.
 - [Customer Experience Blueprint Starter Kit](https://www.strideforward.world/resources/customer-experience-blueprint): Map an experience from the customer's side and choose one moment to improve.
 - [Pilot Plan](https://www.strideforward.world/resources/pilot-plan): A one-page plan for a small test of a new program, service, or offer.
