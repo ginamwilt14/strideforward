@@ -342,3 +342,10 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .service .pkg-tagline{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--teal);margin-bottom:var(--space-4)}
 .family-grid .brand-plate{display:flex;align-items:center;height:88px;padding:16px 18px;background:#F5F0E8;margin-bottom:var(--space-5)}
 .family-grid .brand-plate img{display:block;width:auto;height:auto;max-height:56px;max-width:100%}
+.sf-ps-formula{font-family:var(--font-display);font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.45;color:var(--ink);margin:var(--space-10) 0 var(--space-8);padding:var(--space-6) var(--space-8);background:var(--surface);border-left:3px solid var(--gold);max-width:60rem}
+.sf-ps-formula span{color:var(--teal);font-style:italic}
+.sf-ps-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-10);margin-bottom:var(--space-8)}
+.sf-ps-examples>div{border-top:1px solid var(--line);padding-top:var(--space-4)}
+.sf-ps-examples p:not(.eyebrow){font-size:var(--text-sm);color:var(--muted);margin:0 0 var(--space-3)}
+.sf-ps-examples strong{color:var(--ink)}
+@media (max-width:720px){.sf-ps-examples{grid-template-columns:1fr;gap:var(--space-6)}}
