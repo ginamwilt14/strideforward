@@ -131,7 +131,8 @@ document.addEventListener('click', event => {
   if (!link) return;
   const href = link.getAttribute('href');
   const text = link.textContent.replace(/\s+/g, ' ').replace(/[↗↓]/g, '').trim().slice(0, 80);
-  if (/#book$|^\/book$|calendly\.com/.test(href)) sfga('sf_book_click', {cta_text: text, cta_section: sfSection(link)});
+  if (link.dataset.checkout) sfga('sf_checkout_click', {checkout_id: link.dataset.checkout, cta_text: text, cta_section: sfSection(link), link_ready: /^https:/.test(href) ? 'yes' : 'no'});
+  else if (/#book$|^\/book$|calendly\.com/.test(href)) sfga('sf_book_click', {cta_text: text, cta_section: sfSection(link)});
   else if (/#deck$|^\/deck$/.test(href)) sfga('sf_deck_click', {cta_text: text, cta_section: sfSection(link)});
   else if (/^mailto:/.test(href)) sfga('sf_email_click', {cta_section: sfSection(link)});
   else if (/^tel:/.test(href)) sfga('sf_phone_click', {cta_section: sfSection(link)});
