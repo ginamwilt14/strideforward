@@ -342,3 +342,10 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .service .pkg-tagline{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--teal);margin-bottom:var(--space-4)}
 .family-grid .brand-plate{display:flex;align-items:center;height:88px;padding:16px 18px;background:#F5F0E8;margin-bottom:var(--space-5)}
 .family-grid .brand-plate img{display:block;width:auto;height:auto;max-height:56px;max-width:100%}
+.sf-lm-example{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-10);margin:var(--space-10) 0 0}
+.sf-lm-example>div{border-top:1px solid var(--line);padding:var(--space-4) 0}
+.sf-lm-example dt{font-weight:600;color:var(--ink);margin-bottom:var(--space-2)}
+.sf-lm-example dt span{color:var(--teal);font-size:var(--text-xs);letter-spacing:.08em;margin-right:var(--space-2)}
+.sf-lm-example dd{margin:0;color:var(--muted);font-size:var(--text-sm)}
+.sf-lm-sources ul{padding-left:1.1em}.sf-lm-sources li{margin-bottom:var(--space-3);font-size:var(--text-sm)}
+@media (max-width:720px){.sf-lm-example{grid-template-columns:1fr}}
