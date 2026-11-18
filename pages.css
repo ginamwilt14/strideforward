@@ -79,6 +79,11 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .sf-quiet{margin-bottom:var(--space-16);display:grid;grid-template-columns:1fr auto;gap:var(--space-8);align-items:center;border-block:1px solid var(--line);padding-block:var(--space-8)}
 .sf-quiet h2{font-size:1.4rem;margin-bottom:var(--space-2)}
 .sf-quiet p{color:var(--muted);font-size:var(--text-sm);max-width:60ch}
+#free-tool .sf-quiet{margin-bottom:var(--space-8)}
+.sf-more-links{margin-bottom:var(--space-16)}
+.sf-more-links ul{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));column-gap:var(--space-8)}
+.sf-more-links li{border-top:1px solid var(--line);padding:var(--space-3) 0;font-size:var(--text-sm)}
+.sf-more-links a{font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .sf-closer{text-align:left}
 .sf-closer .hero-actions{margin-top:var(--space-6)}
 /* contact / booking */
