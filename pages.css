@@ -342,6 +342,35 @@ input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:
 .service .pkg-tagline{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--teal);margin-bottom:var(--space-4)}
 .family-grid .brand-plate{display:flex;align-items:center;height:88px;padding:16px 18px;background:#F5F0E8;margin-bottom:var(--space-5)}
 .family-grid .brand-plate img{display:block;width:auto;height:auto;max-height:56px;max-width:100%}
+/* Website packages and ways to pay (Nov 13, 2026) */
+.sf-site-pkgs .sf-path h3{font-size:1.3rem}
+.sf-price{display:block;font-family:var(--font-display);font-size:clamp(2.2rem,4vw,2.8rem);line-height:1;color:var(--teal);margin-bottom:var(--space-3)}
+.sf-pkg-plus{font-weight:600;font-size:var(--text-sm);margin:0 0 var(--space-2)}
+.sf-pkg-list{margin:0 0 var(--space-6);padding-left:20px;display:grid;gap:var(--space-2);color:var(--muted);font-size:var(--text-sm);line-height:1.55}
+.sf-pkg-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:var(--space-4) var(--space-6);align-items:center}
+.sf-path .sf-pkg-actions .button{margin-top:0}
+.sf-path-body{color:var(--muted);font-size:var(--text-sm);line-height:1.6;margin:0 0 var(--space-6)}
+.sf-pay-how{display:block;font-family:var(--font-body);font-size:var(--text-sm);font-weight:400;color:var(--muted);margin-top:var(--space-2);line-height:1.5}
+@media(min-width:701px){.sf-pay-table tbody th{width:34%}}
+.sf-pay-amt{display:block;font-family:var(--font-display);font-weight:500;font-size:1.35rem;color:var(--ink)}
+.sf-pay-then{display:block;margin-top:2px}
+.sf-pay-table .button{margin-top:var(--space-3);min-height:44px;padding:var(--space-3) var(--space-5)}
+.sf-after-list{max-width:80ch;color:var(--muted)}
+.sf-after-list strong{color:var(--ink)}
+.sf-lm-example{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-10);margin:var(--space-10) 0 0}
+.sf-lm-example>div{border-top:1px solid var(--line);padding:var(--space-4) 0}
+.sf-lm-example dt{font-weight:600;color:var(--ink);margin-bottom:var(--space-2)}
+.sf-lm-example dt span{color:var(--teal);font-size:var(--text-xs);letter-spacing:.08em;margin-right:var(--space-2)}
+.sf-lm-example dd{margin:0;color:var(--muted);font-size:var(--text-sm)}
+.sf-lm-sources ul{padding-left:1.1em}.sf-lm-sources li{margin-bottom:var(--space-3);font-size:var(--text-sm)}
+@media (max-width:720px){.sf-lm-example{grid-template-columns:1fr}}
+.sf-ps-formula{font-family:var(--font-display);font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.45;color:var(--ink);margin:var(--space-10) 0 var(--space-8);padding:var(--space-6) var(--space-8);background:var(--surface);border-left:3px solid var(--gold);max-width:60rem}
+.sf-ps-formula span{color:var(--teal);font-style:italic}
+.sf-ps-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-10);margin-bottom:var(--space-8)}
+.sf-ps-examples>div{border-top:1px solid var(--line);padding-top:var(--space-4)}
+.sf-ps-examples p:not(.eyebrow){font-size:var(--text-sm);color:var(--muted);margin:0 0 var(--space-3)}
+.sf-ps-examples strong{color:var(--ink)}
+@media (max-width:720px){.sf-ps-examples{grid-template-columns:1fr;gap:var(--space-6)}}
 /* Research, quotes, and fun facts carousel (Nov 13, 2026). Site colors come from the --gi-* tokens set per site. */
 .gi{padding:clamp(2.5rem,6vw,4.5rem) 0;background:var(--gi-bg)}
 .gi-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem 2rem;margin-bottom:1.5rem}
